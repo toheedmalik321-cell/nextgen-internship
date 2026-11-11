@@ -3,8 +3,8 @@
 **Intern:** Toheed Mehmood
 **Deadline:** 12 November 2026
 **Form:** https://forms.gle/imPxU3QeaiVq9afc7
-**Status:** GitHub repo and Pages site are live. Task 1 post is published and verified.
-Posts 2-6 and the form are still pending.
+**Status:** GitHub repo and Pages site are live. All six LinkedIn posts are published and
+verified. Only the form is left.
 **Do not click Submit until Toheed confirms.**
 
 ---
@@ -34,15 +34,16 @@ then copy the post URL.
 | Task | Image | Post link | Done |
 | --- | --- | --- | --- |
 | Task 1 — Portfolio | `LinkedIn-Images\Task-1-Portfolio.png` | https://lnkd.in/p/d7z22Ytd | [x] |
-| Task 2 — Taskbook | `LinkedIn-Images\Task-2-Taskbook.png` |  | [ ] |
-| Task 3 — Plates | `LinkedIn-Images\Task-3-Plates.png` |  | [ ] |
-| Task 4 — Quiz | `LinkedIn-Images\Task-4-Quiz.png` |  | [ ] |
-| Task 5 — TaskFlow | `LinkedIn-Images\Task-5-TaskFlow.png` |  | [ ] |
-| Task 6 — Final | `LinkedIn-Images\Task-6-Final.png` |  | [ ] |
+| Task 2 — Taskbook | `LinkedIn-Images\Task-2-Taskbook.png` | https://www.linkedin.com/posts/toheed-malik-2b53953aa_javascript-webdevelopment-localstorage-share-7526405727733772288-Fa6N/ | [x] |
+| Task 3 — Plates | `LinkedIn-Images\Task-3-Plates.png` | https://www.linkedin.com/posts/toheed-malik-2b53953aa_css-svg-javascript-share-7526406129292238848-ZgLV/ | [x] |
+| Task 4 — Quiz | `LinkedIn-Images\Task-4-Quiz.png` | https://www.linkedin.com/posts/toheed-malik-2b53953aa_javascript-webdevelopment-accessibility-share-7526407085635432449-HLYd/ | [x] |
+| Task 5 — TaskFlow | `LinkedIn-Images\Task-5-TaskFlow.png` | https://www.linkedin.com/posts/toheed-malik-2b53953aa_javascript-webdevelopment-kanban-share-7526407417807597568-m5hW/ | [x] |
+| Task 6 — Final | `LinkedIn-Images\Task-6-Final.png` | https://www.linkedin.com/posts/toheed-malik-2b53953aa_webdevelopment-javascript-html-share-7526410241715023872-lU5S/ | [x] |
 
-Task 1 was checked without a LinkedIn session: the text matches the draft word for word,
-the screenshot is attached, and the short link inside the post resolves to
-https://toheedmalik321-cell.github.io/nextgen-internship/Task-1-Portfolio/
+All six were checked without a LinkedIn session: every post returns 200, the text matches
+the draft, an image is attached, and the short link inside each post opens the matching
+project page on GitHub Pages. Task 6 still carries the older dark screenshot; the post URL
+does not change if that image is swapped through Edit post.
 
 Post text: `LinkedIn-Posts.md`.
 
@@ -65,7 +66,7 @@ https://github.com/toheedmalik321-cell/nextgen-internship/blob/main/Full-Interns
 ## 4. Before submitting
 
 - [x] GitHub repo is public and all six task folders load without sign-in.
-- [ ] Six LinkedIn post links open publicly.
+- [x] Six LinkedIn post links open publicly.
 - [ ] The report PDF opens and shows 5 pages.
 - [ ] Task 6 scope confirmed with the mentor: final presentation/report, not a sixth code project.
 - [ ] Toheed has explicitly said **submit**.
