@@ -3,7 +3,8 @@
 **Intern:** Toheed Mehmood
 **Deadline:** 12 November 2026
 **Form:** https://forms.gle/imPxU3QeaiVq9afc7
-**Status:** GitHub repo is live. LinkedIn posts and the form are still pending.
+**Status:** GitHub repo and Pages site are live. Task 1 post is published and verified.
+Posts 2-6 and the form are still pending.
 **Do not click Submit until Toheed confirms.**
 
 ---
@@ -32,12 +33,16 @@ then copy the post URL.
 
 | Task | Image | Post link | Done |
 | --- | --- | --- | --- |
-| Task 1 — Portfolio | `LinkedIn-Images\Task-1-Portfolio.png` |  | [ ] |
+| Task 1 — Portfolio | `LinkedIn-Images\Task-1-Portfolio.png` | https://lnkd.in/p/d7z22Ytd | [x] |
 | Task 2 — Taskbook | `LinkedIn-Images\Task-2-Taskbook.png` |  | [ ] |
 | Task 3 — Plates | `LinkedIn-Images\Task-3-Plates.png` |  | [ ] |
 | Task 4 — Quiz | `LinkedIn-Images\Task-4-Quiz.png` |  | [ ] |
 | Task 5 — TaskFlow | `LinkedIn-Images\Task-5-TaskFlow.png` |  | [ ] |
-| Task 6 — Final | `LinkedIn-Images\Task-5-TaskFlow.png` |  | [ ] |
+| Task 6 — Final | `LinkedIn-Images\Task-6-Final.png` |  | [ ] |
+
+Task 1 was checked without a LinkedIn session: the text matches the draft word for word,
+the screenshot is attached, and the short link inside the post resolves to
+https://toheedmalik321-cell.github.io/nextgen-internship/Task-1-Portfolio/
 
 Post text: `LinkedIn-Posts.md`.
 
@@ -67,18 +72,23 @@ https://github.com/toheedmalik321-cell/nextgen-internship/blob/main/Full-Interns
 
 ---
 
-## 5. Optional: live demos
+## 5. Live demos
 
-If GitHub Pages is switched on (Settings → Pages → Deploy from a branch → `main` → `/ (root)`),
-these URLs run the projects in the browser:
+GitHub Pages is on (branch `main`, `/ (root)`). These URLs run the projects in the browser,
+no sign-in needed:
 
 ```
+https://toheedmalik321-cell.github.io/nextgen-internship/
 https://toheedmalik321-cell.github.io/nextgen-internship/Task-1-Portfolio/
 https://toheedmalik321-cell.github.io/nextgen-internship/Task-2-Taskbook/
 https://toheedmalik321-cell.github.io/nextgen-internship/Task-3-Plates/
 https://toheedmalik321-cell.github.io/nextgen-internship/Task-4-Quiz/
 https://toheedmalik321-cell.github.io/nextgen-internship/Task-5-TaskFlow/
+https://toheedmalik321-cell.github.io/nextgen-internship/Full-Internship-Report.pdf
 ```
+
+The form still asks for a GitHub link, so paste the `/tree/main/...` folder links in section 1,
+not these.
 
 ---
 
