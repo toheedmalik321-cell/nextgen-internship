@@ -1,0 +1,12 @@
+﻿HOW TO OPEN
+===========
+1. Double-click index.html in this folder.
+2. It opens directly in a browser from file:// - no server, no install, no build step.
+3. If Windows says it cannot find a program, right-click index.html -> Open with -> Google Chrome.
+
+This is one task from the Next Gen Software Hub internship submission by Toheed Mehmood.
+Each task is delivered as its own folder and ZIP.
+NOTE
+----
+The project cards on this portfolio point to the other internship tasks.
+Those tasks are delivered separately as Task-2 to Task-5.

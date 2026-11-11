@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <title>TaskFlow Kanban cover</title>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0v64" fill="none" stroke="#24282D" stroke-width="1"/>
+    </pattern>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#101214"/>
+  <rect width="800" height="500" fill="url(#grid)" opacity=".45"/>
+
+  <!-- columns -->
+  <g fill="#0A0B0C" stroke="#24282D" stroke-width="2">
+    <rect x="80" y="110" width="190" height="300"/>
+    <rect x="305" y="110" width="190" height="300"/>
+    <rect x="530" y="110" width="190" height="300"/>
+  </g>
+  <g fill="#5C636B">
+    <rect x="100" y="132" width="74" height="8"/>
+    <rect x="325" y="132" width="58" height="8"/>
+    <rect x="550" y="132" width="92" height="8"/>
+  </g>
+  <g fill="#24282D">
+    <rect x="230" y="134" width="20" height="4"/>
+    <rect x="455" y="134" width="20" height="4"/>
+    <rect x="680" y="134" width="20" height="4"/>
+  </g>
+
+  <!-- cards -->
+  <g fill="#171A1D" stroke="#24282D" stroke-width="2">
+    <rect x="100" y="166" width="150" height="62"/>
+    <rect x="100" y="240" width="150" height="62"/>
+    <rect x="100" y="314" width="150" height="62"/>
+
+    <rect x="325" y="240" width="150" height="62"/>
+
+    <rect x="550" y="166" width="150" height="62"/>
+    <rect x="550" y="240" width="150" height="62"/>
+    <rect x="550" y="314" width="150" height="62"/>
+  </g>
+
+  <g fill="#24282D">
+    <rect x="116" y="184" width="96" height="6"/>
+    <rect x="116" y="198" width="64" height="6"/>
+    <rect x="116" y="258" width="118" height="6"/>
+    <rect x="116" y="272" width="52" height="6"/>
+    <rect x="116" y="332" width="80" height="6"/>
+    <rect x="566" y="184" width="70" height="6"/>
+    <rect x="566" y="198" width="110" height="6"/>
+    <rect x="566" y="258" width="94" height="6"/>
+    <rect x="566" y="272" width="120" height="6"/>
+    <rect x="566" y="332" width="58" height="6"/>
+  </g>
+
+  <!-- the card being dragged, lifted out of the second column -->
+  <g transform="translate(0 -14)">
+    <rect x="325" y="166" width="150" height="62" fill="#171A1D" stroke="#FF6B4A" stroke-width="2"/>
+    <rect x="325" y="166" width="150" height="62" fill="#FF6B4A" opacity=".12"/>
+    <rect x="341" y="184" width="86" height="6" fill="#FF6B4A"/>
+    <rect x="341" y="198" width="118" height="6" fill="#5C636B"/>
+    <rect x="341" y="212" width="40" height="4" fill="#FF6B4A" opacity=".5"/>
+  </g>
+
+  <!-- dashed drop target -->
+  <rect x="325" y="166" width="150" height="62" fill="none" stroke="#FF6B4A" stroke-width="2" stroke-dasharray="8 8" opacity=".55"/>
+  <path d="M400 340v40" stroke="#FF6B4A" stroke-width="2" stroke-dasharray="6 8" opacity=".6"/>
+
+  <!-- drop arrow -->
+  <path d="M262 350h34m-12-12l12 12-12 12" fill="none" stroke="#FF6B4A" stroke-width="3"/>
+  <path d="M487 350h34m-12-12l12 12-12 12" fill="none" stroke="#5C636B" stroke-width="3"/>
+
+  <rect width="800" height="500" filter="url(#grain)" opacity=".05"/>
+</svg>

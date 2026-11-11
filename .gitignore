@@ -1,0 +1,25 @@
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temporary output
+*.log
+*.tmp
+~$*
+
+# Dependencies (not used by these projects, kept for safety)
+node_modules/
+
+# Secrets and environment files
+.env
+.env.*
+
+# Packaged archives are produced locally for submission, not tracked
+*.zip

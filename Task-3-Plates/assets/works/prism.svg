@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="pl14t" aria-describedby="pl14d">
+  <title id="pl14t">Prism</title>
+  <desc id="pl14d">Abstract plate: a single incident ray striking the left face of an outlined equilateral prism, splitting into a nine-line fan that disperses through the glass and exits the right face with visible deviation, over a faint spectral ramp bar and a set of construction rays.</desc>
+  <defs>
+  <filter id="grain" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="4" seed="37" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.949 0 0 0 0 0.937 0 0 0 0 0.910 0.9 0 0 0 -0.34"/>
+  </filter>
+  <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#C9F24B"/>
+    <stop offset="0.3" stop-color="#FFC857"/>
+    <stop offset="0.62" stop-color="#FF6B4A"/>
+    <stop offset="1" stop-color="#4FD6C2"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="#0A0B0C"/>
+  <g stroke="#24282D" stroke-width="1" fill="none" opacity="0.9">
+    <path d="M0 120h1200 M0 780h1200 M120 0v900 M1080 0v900"/>
+    <path d="M320 0v900 M880 0v900" stroke-dasharray="6 8" opacity="0.6"/>
+  </g>
+  <g stroke="#F2EFE8" stroke-width="1.1" opacity="0.28" fill="none">
+    <path d="M600 60v780 M60 450h1080" stroke-dasharray="10 10"/>
+    <path d="M225 150 975 750 M975 150 225 750" stroke-dasharray="4 12"/>
+  </g>
+  <path d="M600 130 L902 660 L298 660 Z" fill="#F2EFE8" opacity="0.045"/>
+  <path d="M600 130 L902 660 L298 660 Z" fill="none" stroke="#F2EFE8" stroke-width="2.4" opacity="0.85"/>
+  <path d="M600 130 L298 660" fill="none" stroke="#F2EFE8" stroke-width="1.2" opacity="0.4" stroke-dasharray="8 6"/>
+  <path d="M600 130 L902 660" fill="none" stroke="#F2EFE8" stroke-width="1.2" opacity="0.4" stroke-dasharray="8 6"/>
+  <path d="M60 300 L470 452" fill="none" stroke="#F2EFE8" stroke-width="3.2"/>
+  <circle cx="470" cy="452" r="7" fill="#F2EFE8"/>
+  <g stroke-width="2.2" fill="none">
+    <path d="M470 452 L560 500" stroke="#C9F24B"/>
+    <path d="M470 452 L560 508" stroke="#C9F24B" opacity="0.92"/>
+    <path d="M470 452 L560 516" stroke="#FFC857"/>
+    <path d="M470 452 L560 524" stroke="#FFC857" opacity="0.88"/>
+    <path d="M470 452 L560 532" stroke="#FF6B4A"/>
+    <path d="M470 452 L560 540" stroke="#FF6B4A" opacity="0.85"/>
+    <path d="M470 452 L560 548" stroke="#FF6B4A" opacity="0.7"/>
+    <path d="M470 452 L560 556" stroke="#4FD6C2" opacity="0.8"/>
+    <path d="M470 452 L560 564" stroke="#4FD6C2" opacity="0.65"/>
+  </g>
+  <g stroke-width="2.6" fill="none">
+    <path d="M560 500 L1140 250" stroke="#C9F24B"/>
+    <path d="M560 508 L1140 320" stroke="#C9F24B" opacity="0.92"/>
+    <path d="M560 516 L1140 390" stroke="#FFC857"/>
+    <path d="M560 524 L1140 455" stroke="#FFC857" opacity="0.88"/>
+    <path d="M560 532 L1140 520" stroke="#FF6B4A"/>
+    <path d="M560 540 L1140 585" stroke="#FF6B4A" opacity="0.85"/>
+    <path d="M560 548 L1140 650" stroke="#FF6B4A" opacity="0.7"/>
+    <path d="M560 556 L1140 715" stroke="#4FD6C2" opacity="0.8"/>
+    <path d="M560 564 L1140 780" stroke="#4FD6C2" opacity="0.65"/>
+  </g>
+  <g fill="none" stroke="#4FD6C2" stroke-width="1.1" opacity="0.55">
+    <path d="M60 300 L470 452 L1140 250"/>
+    <path d="M60 300 L470 452 L1140 780" stroke-dasharray="5 7"/>
+  </g>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1.4" opacity="0.6">
+    <path d="M470 452 m-34 0 a34 34 0 0 1 68 0" stroke-dasharray="3 4"/>
+    <path d="M470 418 L470 300" stroke-dasharray="4 6"/>
+    <path d="M470 452 m0 0 L560 500" stroke="#C9F24B" opacity="0.5"/>
+  </g>
+  <rect x="120" y="800" width="960" height="14" fill="url(#spectrum)" opacity="0.75"/>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1" opacity="0.35">
+    <path d="M120 786v32 M360 786v32 M600 786v32 M840 786v32 M1080 786v32"/>
+  </g>
+  <circle cx="470" cy="452" r="150" fill="none" stroke="#F2EFE8" stroke-width="1" opacity="0.2" stroke-dasharray="6 10"/>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.55">
+    <path d="M28 62V28h34 M1138 28h34v34 M1172 838v34h-34 M62 872H28v-34"/>
+  </g>
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.5"/>
+</svg>

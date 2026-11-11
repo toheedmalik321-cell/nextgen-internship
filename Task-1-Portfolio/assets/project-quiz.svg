@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <title>Quiz Arena cover</title>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0v64" fill="none" stroke="#24282D" stroke-width="1"/>
+    </pattern>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#171A1D"/>
+  <rect width="800" height="500" fill="url(#grid)" opacity=".45"/>
+
+  <!-- score dial -->
+  <circle cx="150" cy="130" r="76" fill="none" stroke="#24282D" stroke-width="16"/>
+  <path d="M150 54a76 76 0 0 1 66 114" fill="none" stroke="#FFC857" stroke-width="16" stroke-linecap="butt"/>
+  <g stroke="#FFC857" stroke-width="2" opacity=".7">
+    <path d="M150 36v12M150 212v12M56 130h12M232 130h12"/>
+  </g>
+  <rect x="112" y="120" width="76" height="12" fill="#FFC857" opacity=".8"/>
+
+  <!-- answer rows -->
+  <g fill="#101214" stroke="#24282D" stroke-width="2">
+    <rect x="290" y="72" width="440" height="52"/>
+    <rect x="290" y="140" width="440" height="52"/>
+    <rect x="290" y="208" width="440" height="52"/>
+    <rect x="290" y="276" width="440" height="52"/>
+  </g>
+
+  <!-- correct answer -->
+  <rect x="290" y="140" width="440" height="52" fill="#FFC857" opacity=".14"/>
+  <rect x="290" y="140" width="6" height="52" fill="#FFC857"/>
+  <g fill="#FFC857">
+    <rect x="312" y="160" width="14" height="14"/>
+  </g>
+  <path d="M315 167l4 5 7-10" fill="none" stroke="#171A1D" stroke-width="2.5"/>
+  <rect x="344" y="162" width="200" height="10" fill="#FFC857"/>
+  <rect x="640" y="158" width="66" height="18" fill="#FFC857" opacity=".25"/>
+
+  <!-- other options -->
+  <g fill="none" stroke="#5C636B" stroke-width="2">
+    <rect x="312" y="92" width="14" height="14"/>
+    <rect x="312" y="228" width="14" height="14"/>
+    <rect x="312" y="296" width="14" height="14"/>
+  </g>
+  <g fill="#5C636B">
+    <rect x="344" y="94" width="160" height="10"/>
+    <rect x="344" y="230" width="248" height="10"/>
+    <rect x="344" y="298" width="120" height="10"/>
+  </g>
+
+  <!-- streak blocks -->
+  <g fill="#101214" stroke="#24282D" stroke-width="2">
+    <rect x="90" y="330" width="40" height="40"/>
+    <rect x="142" y="330" width="40" height="40"/>
+    <rect x="194" y="330" width="40" height="40"/>
+    <rect x="246" y="330" width="40" height="40"/>
+    <rect x="298" y="330" width="40" height="40"/>
+    <rect x="350" y="330" width="40" height="40"/>
+    <rect x="402" y="330" width="40" height="40"/>
+  </g>
+  <g fill="#FFC857">
+    <rect x="92" y="332" width="36" height="36"/>
+    <rect x="144" y="332" width="36" height="36"/>
+    <rect x="196" y="332" width="36" height="36"/>
+  </g>
+  <path d="M470 350l16 16 30-40" fill="none" stroke="#FFC857" stroke-width="4"/>
+  <g fill="#9AA1A9">
+    <rect x="540" y="344" width="60" height="6" opacity=".5"/>
+    <rect x="540" y="358" width="34" height="6" opacity=".3"/>
+  </g>
+
+  <!-- timer bar -->
+  <rect x="90" y="418" width="640" height="8" fill="#101214" stroke="#24282D" stroke-width="2"/>
+  <rect x="92" y="420" width="410" height="4" fill="#FFC857"/>
+
+  <rect width="800" height="500" filter="url(#grain)" opacity=".05"/>
+</svg>

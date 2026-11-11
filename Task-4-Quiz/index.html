@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ink">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Quiz Arena — a timed, graded assessment tool for Web Development Fundamentals. 20 questions, instant explanations, topic breakdown and a printed report.">
+<meta name="theme-color" content="#0A0B0C">
+<title>Quiz Arena · Web Development Fundamentals</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="page-grid" aria-hidden="true"></div>
+<div class="page-grain" aria-hidden="true"></div>
+
+<header class="masthead" id="top">
+  <div class="masthead__bar">
+    <div class="shell masthead__inner">
+
+      <p class="wordmark"><span class="wordmark__mark" aria-hidden="true">QA</span><span class="wordmark__name">QUIZ ARENA</span></p>
+
+      <p class="masthead__meta">
+        <span>NG&#x22C1;SH</span><span class="masthead__dot" aria-hidden="true"></span><span>WEEK 05&#x2013;06</span><span class="masthead__dot" aria-hidden="true"></span><span>WEB FUNDAMENTALS</span>
+      </p>
+
+      <div class="masthead__tools">
+        <p class="clock" id="clock" hidden>
+          <span class="clock__label">TIME</span>
+          <span class="clock__digits" id="clock-digits">00:30</span>
+        </p>
+
+        <button class="btn btn--ghost btn--sm" type="button" id="btn-pause" hidden aria-pressed="false">
+          <span class="btn__glyph" aria-hidden="true">&#x23F8;</span>Pause
+        </button>
+
+        <button class="btn btn--icon" type="button" id="btn-sound" aria-pressed="true" aria-label="Sound effects: on">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="icon__wave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+        </button>
+
+        <button class="btn btn--icon" type="button" id="btn-theme" aria-pressed="false" aria-label="Switch to paper theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><circle class="icon__disc" cx="12" cy="12" r="6.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M19.4 4.6l-2.1 2.1M6.7 17.3l-2.1 2.1"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="timerbar" id="timerbar" hidden role="progressbar" aria-label="Seconds remaining on this question" aria-valuemin="0" aria-valuemax="30" aria-valuenow="30" aria-valuetext="30 seconds remaining">
+    <span class="timerbar__fill" id="timerbar-fill"></span>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <p class="sr-only" id="live-region" aria-live="polite" aria-atomic="true"></p>
+
+  <!-- ================================================================ SETUP -->
+  <section class="screen screen--setup" id="screen-setup" aria-labelledby="setup-title">
+    <div class="setup-tex" aria-hidden="true"></div>
+
+    <div class="shell">
+
+      <p class="eyebrow" data-reveal><span>00</span> / Setup</p>
+      <h1 class="display display--xl" id="setup-title" data-reveal>Web Development&nbsp;Fundamentals</h1>
+      <p class="lede" data-reveal>
+        Twenty questions on the things an interviewer actually asks — semantics, layout,
+        the DOM, accessibility, Git and the DevTools panel you should already live in.
+        Thirty seconds a question. Every answer reveals the reasoning, not just the verdict.
+      </p>
+
+      <div class="setup">
+
+        <section class="panel" aria-labelledby="config-title" data-reveal>
+          <h2 class="panel__title" id="config-title">Configure your run</h2>
+
+          <form id="setup-form" novalidate>
+
+            <div class="field">
+              <label class="field__label" for="handle">Handle</label>
+              <input class="field__input" type="text" id="handle" name="handle" value="" maxlength="24"
+                     autocomplete="off" autocapitalize="off" spellcheck="false"
+                     placeholder="e.g. a.rivera"
+                     aria-describedby="handle-help handle-error" aria-invalid="false">
+              <p class="field__help" id="handle-help">2&#x2013;24 characters &#x00B7; letters, numbers, spaces and &#x2212 _ .</p>
+              <p class="field__error" id="handle-error" role="alert" hidden></p>
+            </div>
+
+            <fieldset class="field field--group">
+              <legend class="field__label">Difficulty tiers</legend>
+              <div class="chips" id="difficulty-chips"></div>
+              <p class="field__error" id="difficulty-error" role="alert" hidden></p>
+            </fieldset>
+
+            <fieldset class="field field--group">
+              <legend class="field__label">Topics</legend>
+              <div class="chips" id="topic-chips"></div>
+              <p class="field__error" id="topic-error" role="alert" hidden></p>
+            </fieldset>
+
+            <div class="field">
+              <label class="field__label" for="count">Question count</label>
+              <div class="select">
+                <select class="field__input" id="count" name="count">
+                  <option value="5">5 questions</option>
+                  <option value="10" selected>10 questions</option>
+                  <option value="15">15 questions</option>
+                  <option value="all">All questions</option>
+                </select>
+                <svg class="select__caret" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1l5 5 5-5"/></svg>
+              </div>
+            </div>
+
+            <p class="preview" id="config-preview">10 QUESTIONS &#x00B7; 5 MINUTES &#x00B7; ALL TIERS</p>
+            <p class="pool-note" id="pool-note" role="status" hidden></p>
+
+            <button class="btn btn--primary btn--wide" type="submit" id="btn-start">Start quiz</button>
+          </form>
+        </section>
+
+        <div class="setup__aside">
+
+          <section class="aside" aria-labelledby="how-title" data-reveal>
+            <h2 class="aside__title" id="how-title">How it works</h2>
+            <ol class="ledger">
+              <li><span class="ledger__num">01</span><span class="ledger__body"><b>Configure.</b> Pick a handle, the tiers you want and the topics you are weakest in.</span></li>
+              <li><span class="ledger__num">02</span><span class="ledger__body"><b>Answer.</b> Thirty seconds per question. Press <kbd>A</kbd>&#x2013;<kbd>D</kbd> or the arrow keys to move, then <kbd>Enter</kbd> to lock it in.</span></li>
+              <li><span class="ledger__num">03</span><span class="ledger__body"><b>Read the why.</b> Confirming reveals a written explanation — right or wrong, you get the reasoning.</span></li>
+              <li><span class="ledger__num">04</span><span class="ledger__body"><b>Review.</b> Results break the run down by topic, list every question and export a JSON report.</span></li>
+            </ol>
+          </section>
+
+          <section class="aside" aria-labelledby="legend-title" data-reveal>
+            <h2 class="aside__title" id="legend-title">What you&rsquo;ll be asked about</h2>
+            <ul class="legend" id="topic-legend"></ul>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================= LOADING -->
+  <section class="screen screen--loading" id="screen-loading" aria-labelledby="loading-title" aria-busy="true" hidden>
+    <div class="shell shell--narrow">
+      <p class="eyebrow"><span>01</span> / Briefing</p>
+      <h2 class="display display--md" id="loading-title">Building your quiz</h2>
+      <p class="loadingline"><span class="spinner" aria-hidden="true"></span><span id="loading-note">Filtering the bank&#x2026;</span></p>
+
+      <div class="skeleton" aria-hidden="true">
+        <span class="skeleton__bar skeleton__bar--wide"></span>
+        <span class="skeleton__bar skeleton__bar--wide"></span>
+        <span class="skeleton__bar"></span>
+        <span class="skeleton__bar"></span>
+        <span class="skeleton__bar skeleton__bar--short"></span>
+      </div>
+
+      <p class="sr-only" role="status" id="loading-status">Building your quiz.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================== QUIZ -->
+  <section class="screen screen--quiz" id="screen-quiz" aria-labelledby="question-text" hidden>
+
+    <div class="shell quiz">
+
+      <nav class="rail" aria-label="Question navigator">
+        <p class="eyebrow eyebrow--tight"><span>02</span> / Exam</p>
+        <ol class="navgrid" id="navgrid"></ol>
+        <p class="rail__key">
+          <span><i class="key key--answered" aria-hidden="true"></i>Answered</span>
+          <span><i class="key key--open" aria-hidden="true"></i>Open</span>
+          <span><i class="key key--flag" aria-hidden="true"></i>Flagged</span>
+        </p>
+        <p class="rail__tally" id="rail-tally">0 of 10 answered</p>
+      </nav>
+
+      <article class="qcard">
+        <span class="qcard__corner qcard__corner--tl" aria-hidden="true">&#x250C;</span>
+        <span class="qcard__corner qcard__corner--tr" aria-hidden="true">&#x2510;</span>
+        <span class="qcard__corner qcard__corner--bl" aria-hidden="true">&#x2514;</span>
+        <span class="qcard__corner qcard__corner--br" aria-hidden="true">&#x2518;</span>
+
+        <p class="progress" id="progress">Q01 / 10</p>
+
+        <div class="qcard__tags">
+          <span class="chip chip--topic" id="q-topic">CSS</span>
+          <span class="chip chip--tier" id="q-tier">Medium</span>
+          <span class="qcard__spacer"></span>
+          <span class="qcard__clock" id="q-clock" aria-hidden="true">00:30</span>
+          <button class="btn btn--ghost btn--sm btn--flag" type="button" id="btn-flag" aria-pressed="false">
+            <span class="btn__glyph" aria-hidden="true">&#x2691;</span><span id="btn-flag-text">Flag</span>
+          </button>
+        </div>
+
+        <h2 class="qcard__prompt" id="question-text" tabindex="-1">Loading question&#x2026;</h2>
+
+        <div class="options" id="options" role="radiogroup" aria-labelledby="question-text" aria-describedby="options-hint"></div>
+
+        <p class="hint" id="options-hint">
+          <kbd>A</kbd>&#x2013;<kbd>D</kbd> select &#x00B7; <kbd>&#x2190;</kbd><kbd>&#x2192;</kbd> move &#x00B7;
+          <kbd>Enter</kbd> confirm &#x00B7; <kbd>F</kbd> flag &#x00B7; <kbd>P</kbd> pause
+        </p>
+
+        <div class="feedback" id="feedback" hidden>
+          <p class="feedback__flag" id="feedback-flag">Correct</p>
+          <p class="feedback__line" id="feedback-line"></p>
+          <div class="feedback__body">
+            <h3 class="feedback__title">Why</h3>
+            <p class="feedback__text" id="feedback-text"></p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="button" id="btn-confirm" disabled>Confirm</button>
+          <button class="btn btn--ghost" type="button" id="btn-next" hidden>Next question</button>
+          <p class="actions__meta" id="actions-meta">10 unanswered</p>
+          <span class="actions__spacer"></span>
+          <button class="btn btn--ghost btn--sm btn--quit" type="button" id="btn-quit" aria-pressed="false">End quiz now</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================ RESULTS -->
+  <section class="screen screen--results" id="screen-results" aria-labelledby="results-title" hidden>
+    <div class="shell">
+
+      <p class="eyebrow" data-reveal><span>03</span> / Results</p>
+      <h2 class="display display--md" id="results-title" data-reveal>Session complete</h2>
+
+      <section class="scoreboard" aria-labelledby="score-label">
+
+        <div class="scoreboard__cell scoreboard__cell--score">
+          <p class="micro score__label" id="score-label">Final score</p>
+          <p class="score">
+            <span class="score__num" id="score-num">0</span><span class="score__sep" aria-hidden="true">/</span><span class="score__total" id="score-total">0</span>
+            <span class="sr-only" id="score-sr">of 0</span>
+          </p>
+          <p class="micro micro--dim score__meta" id="score-meta">WEB FUNDAMENTALS</p>
+        </div>
+
+        <div class="scoreboard__cell scoreboard__cell--ring">
+          <div class="ring">
+            <svg class="ring__svg" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
+              <circle class="ring__track" cx="64" cy="64" r="56"></circle>
+              <circle class="ring__fill" cx="64" cy="64" r="56" id="ring-fill"></circle>
+            </svg>
+            <p class="ring__value" id="ring-value">0%</p>
+          </div>
+          <p class="micro micro--dim">Accuracy</p>
+        </div>
+
+        <div class="scoreboard__cell scoreboard__cell--grade">
+          <p class="grade__band" id="grade-band">&#x2013;</p>
+          <p class="micro" id="grade-range">Band pending</p>
+          <p class="grade__copy" id="grade-copy">Finishing the report&#x2026;</p>
+        </div>
+      </section>
+
+      <ul class="statstrip" id="statstrip"></ul>
+      <p class="micro micro--dim statstrip__note" id="avg-note">Average time per question pending.</p>
+
+      <section class="block" aria-labelledby="topics-title">
+        <p class="eyebrow" data-reveal><span>03.1</span> / Topic breakdown</p>
+        <h3 class="block__title" id="topics-title" data-reveal>Where the marks went</h3>
+        <ul class="bars" id="topic-bars"></ul>
+      </section>
+
+      <section class="block" id="review" aria-labelledby="review-title">
+        <p class="eyebrow" data-reveal><span>03.2</span> / Full review</p>
+        <h3 class="block__title" id="review-title" data-reveal>Every question, your answer and the reason</h3>
+        <ol class="review" id="review-list"></ol>
+      </section>
+
+      <div class="result-actions">
+        <button class="btn btn--primary" type="button" id="btn-retry">Retry same set</button>
+        <button class="btn btn--ghost" type="button" id="btn-newquiz">New quiz</button>
+        <button class="btn btn--ghost" type="button" id="btn-review-jump">Review answers</button>
+        <button class="btn btn--ghost" type="button" id="btn-export-report">
+          <span class="btn__glyph" aria-hidden="true">&#x2193;</span>Export report JSON
+        </button>
+        <button class="btn btn--ghost" type="button" id="btn-print">
+          <span class="btn__glyph" aria-hidden="true">&#x1F5A8;</span>Print report
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= LEADERBOARD -->
+  <section class="screen screen--board" id="screen-board" aria-labelledby="board-title">
+    <div class="shell">
+
+      <p class="eyebrow" data-reveal><span>04</span> / Standings</p>
+      <h2 class="display display--md" id="board-title" data-reveal>High scores</h2>
+      <p class="lede" data-reveal>
+        Runs are kept in this browser only, under the versioned key
+        <code>ngsh.quiz.scores.v1</code>. Nothing leaves the machine. Export the ledger as JSON
+        if you want to move it, or import one from a classmate.
+      </p>
+
+      <div class="board__bar">
+        <p class="micro" id="board-count">0 runs saved &#x00B7; newest first &#x00B7; top 10</p>
+        <div class="board__tools">
+          <button class="btn btn--ghost btn--sm" type="button" id="btn-export-scores">Export JSON</button>
+          <button class="btn btn--ghost btn--sm" type="button" id="btn-import-scores">Import JSON</button>
+          <input class="sr-only" type="file" id="file-import" accept="application/json,.json" tabindex="-1">
+          <button class="btn btn--danger btn--sm" type="button" id="btn-clear-scores" aria-pressed="false">Clear scores</button>
+        </div>
+      </div>
+
+      <div class="confirm" id="clear-confirm" hidden>
+        <p class="confirm__text" id="clear-text">Delete every saved run? This cannot be undone.</p>
+        <div class="confirm__actions">
+          <button class="btn btn--danger btn--sm" type="button" id="btn-clear-yes">Yes, delete them</button>
+          <button class="btn btn--ghost btn--sm" type="button" id="btn-clear-no">Keep them</button>
+        </div>
+      </div>
+
+      <div class="table-wrap" id="board-table-wrap">
+        <table class="board">
+          <caption class="sr-only">Saved quiz runs, newest first, limited to the ten most recent</caption>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Handle</th>
+              <th scope="col">Score</th>
+              <th scope="col">Tier</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody id="board-rows"></tbody>
+        </table>
+      </div>
+
+      <div class="empty" id="board-empty" hidden>
+        <p class="empty__text">No runs saved yet. Finish a quiz and the ledger starts filling up.</p>
+        <button class="btn btn--ghost" type="button" id="btn-empty-back">Back to setup</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ FAILURE -->
+  <section class="screen screen--fault" id="screen-fault" aria-labelledby="fault-title" hidden>
+    <div class="shell shell--narrow">
+      <p class="eyebrow"><span>!</span> / Fault</p>
+      <h2 class="display display--md" id="fault-title">That did not work</h2>
+      <p class="lede" id="fault-text">Something went wrong and the quiz could not continue.</p>
+      <div class="result-actions">
+        <button class="btn btn--primary" type="button" id="btn-fault-retry">Try again</button>
+        <button class="btn btn--ghost" type="button" id="btn-fault-setup">Back to setup</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <p class="micro micro--dim">
+      20 QUESTIONS EMBEDDED IN js/questions.js &#x00B7; NO NETWORK REQUIRED &#x00B7; CTRL / CMD + P PRINTS THE REPORT
+    </p>
+    <a class="backtop" href="#top">Back to top &#x2191;</a>
+  </div>
+</footer>
+
+<!-- ========================================================== PAUSE DIALOG -->
+<div class="overlay" id="pause-overlay" hidden>
+  <div class="overlay__panel" id="pause-dialog" role="dialog" aria-modal="true" aria-labelledby="pause-title" aria-describedby="pause-desc">
+    <p class="eyebrow"><span>&#x2013;</span> / Paused</p>
+    <h2 class="display display--sm" id="pause-title">Clock stopped</h2>
+    <p class="lede" id="pause-desc">
+      The countdown is frozen and nothing is lost. Resume whenever you are ready.
+    </p>
+    <dl class="overlay__stats">
+      <div><dt>Question</dt><dd id="pause-q">1 / 10</dd></div>
+      <div><dt>On the clock</dt><dd id="pause-t">00:30</dd></div>
+      <div><dt>Still to answer</dt><dd id="pause-u">10</dd></div>
+    </dl>
+    <div class="overlay__actions">
+      <button class="btn btn--primary" type="button" id="btn-resume">Resume quiz</button>
+      <button class="btn btn--ghost" type="button" id="btn-pause-quit">End quiz now</button>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toast-region" role="status" aria-live="polite"></div>
+
+<noscript>
+  <div class="noscript">
+    <p class="noscript__text">
+      QUIZ ARENA RUNS ENTIRELY IN JAVASCRIPT. Enable it, or read the bank directly in
+      <code>js/questions.js</code> — the twenty questions and their answers are readable as plain text.
+    </p>
+  </div>
+</noscript>
+
+<script src="js/questions.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

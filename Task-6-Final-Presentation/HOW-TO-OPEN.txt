@@ -1,0 +1,10 @@
+HOW TO OPEN
+===========
+
+1. INTERNSHIP_REPORT.pdf - double-click and it opens in Chrome, Edge or any PDF reader.
+2. The .md files are plain text. Right-click -> Open with -> Notepad, or open the folder
+   in Visual Studio Code for formatting.
+3. No server, install or internet connection is needed to read these files.
+
+This is Task 6 (final presentation and documentation) of the Next Gen Software Hub
+internship submission by Toheed Mehmood. The five code projects are in Task 1 to Task 5.

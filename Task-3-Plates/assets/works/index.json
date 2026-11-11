@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "generator": "Plates — Week 03-04, Next Gen Software Hub Pvt. Ltd.",
+  "canvas": { "width": 1200, "height": 900 },
+  "palette": ["#0A0B0C", "#171A1D", "#24282D", "#F2EFE8", "#C9F24B", "#4FD6C2", "#FF6B4A", "#FFC857"],
+  "plates": [
+    {
+      "slug": "contour-field",
+      "file": "contour-field.svg",
+      "title": "Contour Field",
+      "category": "Geometric",
+      "added": 16,
+      "tags": ["lines", "ridge", "iso"],
+      "description": "Nested contour lines march across a single ridge, each offset by a fixed interval. Read as a topographic survey of something that does not exist."
+    },
+    {
+      "slug": "strata",
+      "file": "strata.svg",
+      "title": "Strata",
+      "category": "Topographic",
+      "added": 15,
+      "tags": ["bands", "sediment", "fault"],
+      "description": "Horizontal sediment bands stacked at uneven intervals, cut by a slow diagonal fault that displaces every layer it crosses."
+    },
+    {
+      "slug": "topography",
+      "file": "topography.svg",
+      "title": "Topography",
+      "category": "Topographic",
+      "added": 14,
+      "tags": ["contours", "peak", "rings"],
+      "description": "Radial contour rings rising from an off-centre peak. Ring spacing tightens toward the summit, the way real contours do."
+    },
+    {
+      "slug": "moire",
+      "file": "moire.svg",
+      "title": "Moire",
+      "category": "Geometric",
+      "added": 13,
+      "tags": ["interference", "grating", "optics"],
+      "description": "Two fine gratings at a 9.5 unit pitch, one vertical and one horizontal, counter-rotated by thirteen degrees. The beat bands between them are not drawn — they are produced by your eye."
+    },
+    {
+      "slug": "circuit",
+      "file": "circuit.svg",
+      "title": "Circuit",
+      "category": "Technical",
+      "added": 12,
+      "tags": ["traces", "pads", "orthogonal"],
+      "description": "Orthogonal copper traces on a two-layer grid, terminating in round pads. Junctions avoid ninety-degree corners except where a pad forces one."
+    },
+    {
+      "slug": "radial-burst",
+      "file": "radial-burst.svg",
+      "title": "Radial Burst",
+      "category": "Geometric",
+      "added": 11,
+      "tags": ["rays", "origin", "fan"],
+      "description": "Rays thrown from an origin that deliberately sits off the centre of the plate, so the composition leans rather than balances."
+    },
+    {
+      "slug": "brutalist-blocks",
+      "file": "brutalist-blocks.svg",
+      "title": "Brutalist Blocks",
+      "category": "Geometric",
+      "added": 10,
+      "tags": ["slabs", "mass", "concrete"],
+      "description": "Offset concrete slabs with hairline borders and one solid acid plane. Mass without shadow — depth is carried entirely by surface value."
+    },
+    {
+      "slug": "orbit",
+      "file": "orbit.svg",
+      "title": "Orbit",
+      "category": "Geometric",
+      "added": 9,
+      "tags": ["rings", "satellites", "apogee"],
+      "description": "Five concentric orbital rings drawn as open arcs of differing sweep, each carrying satellite markers. One acid ellipse crosses them all on a tilted axis."
+    },
+    {
+      "slug": "blueprint",
+      "file": "blueprint.svg",
+      "title": "Blueprint",
+      "category": "Technical",
+      "added": 8,
+      "tags": ["drafting", "dimension", "titleblock"],
+      "description": "A working drawing sheet: fine and major grids, two dimensioned circles with arrowed extension lines, a dashed centreline, and a title block in the lower right."
+    },
+    {
+      "slug": "lattice",
+      "file": "lattice.svg",
+      "title": "Lattice",
+      "category": "Geometric",
+      "added": 7,
+      "tags": ["grid", "rotate", "band"],
+      "description": "A forty-five degree lattice of outlined cells, each inset to leave a regular gap, with a diagonal band of cells filled solid acid."
+    },
+    {
+      "slug": "spiral-dash",
+      "file": "spiral-dash.svg",
+      "title": "Spiral Dash",
+      "category": "Generative",
+      "added": 6,
+      "tags": ["spiral", "dash", "ticks"],
+      "description": "A dashed Archimedean spiral of twelve turns over radiating tick marks, with a second and third copy at different dash phases to build interference."
+    },
+    {
+      "slug": "waveform",
+      "file": "waveform.svg",
+      "title": "Waveform",
+      "category": "Generative",
+      "added": 5,
+      "tags": ["sine", "ribbons", "amplitude"],
+      "description": "Stacked sine ribbons of increasing amplitude and decreasing phase. One band is filled to show where a real signal would carry its energy."
+    },
+    {
+      "slug": "halftone",
+      "file": "halftone.svg",
+      "title": "Halftone",
+      "category": "Generative",
+      "added": 4,
+      "tags": ["dots", "ramp", "print"],
+      "description": "A halftone dot field whose radius is driven by a diagonal tonal ramp crossed by two sine wave fields and a hot-spot, stepping cyan through off-white to acid lime."
+    },
+    {
+      "slug": "prism",
+      "file": "prism.svg",
+      "title": "Prism",
+      "category": "Technical",
+      "added": 3,
+      "tags": ["dispersion", "ray", "spectrum"],
+      "description": "One incident ray striking the left face of an outlined prism, splitting into a nine-line fan that disperses through the glass and exits the right face with visible deviation."
+    },
+    {
+      "slug": "vortex",
+      "file": "vortex.svg",
+      "title": "Vortex",
+      "category": "Generative",
+      "added": 2,
+      "tags": ["pinwheel", "wedges", "swirl"],
+      "description": "Twenty-four narrow wedges spiralling clockwise around an off-centre core, alternating in opacity so the rotation reads as a pinwheel rather than a starburst."
+    },
+    {
+      "slug": "dot-matrix-face",
+      "file": "dot-matrix-face.svg",
+      "title": "Dot Matrix Face",
+      "category": "Figurative",
+      "added": 1,
+      "tags": ["portrait", "matrix", "light"],
+      "description": "A portrait resolved as a matrix of dots on a fifteen by eleven grid, with dot radius driven by a key light from the upper left, an acid core on the lit cheek and a cyan rim light down the right contour."
+    }
+  ]
+}

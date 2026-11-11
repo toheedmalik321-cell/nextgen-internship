@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="circuit-title circuit-desc">
+  <title id="circuit-title">Circuit</title>
+  <desc id="circuit-desc">Orthogonal copper traces laid out on a two-layer grid, terminating in round pads.</desc>
+
+  <rect width="1200" height="900" fill="#0A0B0C"/>
+
+  <g fill="none" stroke="#1E2226" stroke-width="1">
+    <path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200M0 300H1200M0 360H1200M0 420H1200M0 480H1200M0 540H1200M0 600H1200M0 660H1200M0 720H1200M0 780H1200M0 840H1200M0 900H1200"/>
+    <path d="M60 0V900M120 0V900M180 0V900M240 0V900M300 0V900M360 0V900M420 0V900M480 0V900M540 0V900M600 0V900M660 0V900M720 0V900M780 0V900M840 0V900M900 0V900M960 0V900M1020 0V900M1080 0V900M1140 0V900"/>
+  </g>
+
+  <g fill="none" stroke="#2C323A" stroke-width="2">
+    <path d="M60 900V120H300V60H480"/>
+    <path d="M120 900V300H240V180H420"/>
+    <path d="M180 900V420H360V240H540V120"/>
+    <path d="M240 900V540H480V360H660V180"/>
+    <path d="M300 900V660H600V480H840V300"/>
+    <path d="M360 0V120H540V240H720"/>
+    <path d="M420 0V240H660V360H900V480"/>
+    <path d="M480 0V300H720V480H1020"/>
+    <path d="M540 0V420H780V600H1080"/>
+    <path d="M600 900V780H840V660"/>
+    <path d="M660 900V840H960V720H1140V540"/>
+    <path d="M720 900V780H1020V660"/>
+    <path d="M780 0V180H900V60"/>
+    <path d="M840 0V240H960V120"/>
+    <path d="M900 900V840H1080V780"/>
+    <path d="M960 0V60H1140V240"/>
+    <path d="M1020 900V840H1140V780"/>
+    <path d="M1080 900V660H1140"/>
+  </g>
+
+  <g fill="none" stroke="#4FD6C2" stroke-width="2">
+    <path d="M240 900V780H180V660H120V600"/>
+    <path d="M480 900V780H420V660H360V600"/>
+    <path d="M720 0V120H660V240H600V300"/>
+    <path d="M1080 0V120H1020V240H960V360"/>
+  </g>
+
+  <g fill="none" stroke="#C9F24B" stroke-width="2.5">
+    <path d="M300 780H540V660H780"/>
+    <path d="M900 780V600H1020V480"/>
+  </g>
+
+  <g fill="#0A0B0C" stroke="#2C323A" stroke-width="2">
+    <circle cx="480" cy="60" r="11"/><circle cx="420" cy="180" r="11"/>
+    <circle cx="540" cy="240" r="11"/><circle cx="720" cy="360" r="11"/>
+    <circle cx="900" cy="480" r="11"/><circle cx="1020" cy="480" r="11"/>
+    <circle cx="660" cy="240" r="11"/><circle cx="960" cy="360" r="11"/>
+    <circle cx="180" cy="660" r="11"/><circle cx="360" cy="600" r="11"/>
+    <circle cx="780" cy="660" r="11"/><circle cx="1140" cy="540" r="11"/>
+    <circle cx="600" cy="300" r="11"/><circle cx="1140" cy="780" r="11"/>
+  </g>
+
+  <g fill="#C9F24B">
+    <circle cx="780" cy="660" r="7"/>
+    <circle cx="360" cy="600" r="7"/>
+    <circle cx="960" cy="360" r="7"/>
+  </g>
+
+  <g fill="#0A0B0C" stroke="#4FD6C2" stroke-width="2">
+    <circle cx="300" cy="780" r="14"/>
+    <circle cx="540" cy="660" r="14"/>
+    <circle cx="900" cy="780" r="14"/>
+    <circle cx="1020" cy="480" r="14"/>
+  </g>
+
+  <g fill="none" stroke="#FFC857" stroke-width="1" opacity="0.5">
+    <path d="M120 780H120M120 660H180M480 780H540M480 660H420"/>
+  </g>
+
+  <g fill="none" stroke="#24282D" stroke-width="1.5">
+    <rect x="24" y="24" width="1152" height="852"/>
+  </g>
+</svg>

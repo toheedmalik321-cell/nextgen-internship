@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plates — Generative Gallery | NG Software Hub Week 03–04</title>
+<meta name="description" content="Plates: a filtered, sortable gallery of sixteen abstract SVG studies with a full keyboard-accessible lightbox, deep links, and FLIP-animated reordering.">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <div class="brand">
+      <span class="brand__mark">PLATES</span>
+      <span class="brand__meta">NG&#9701;SH &middot; WEEK 03&ndash;04</span>
+    </div>
+    <p class="readout" id="header-readout" aria-live="polite">16 / 16 SHOWN</p>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ INTRO BAND ============ -->
+  <section class="intro" aria-labelledby="intro-heading">
+    <div class="shell">
+      <p class="eyebrow"><span>00</span> / Gallery</p>
+      <h1 id="intro-heading">Sixteen studies in line, light and noise.</h1>
+      <p class="intro__lede">
+        Every plate here is a hand-authored SVG — no photographs, no stock imagery, no
+        external image service. Each one is generated from a small set of rules and a
+        fixed eight-colour palette, which is why they read as a series rather than a
+        collection. Filter them, search them, and open any of them full screen.
+      </p>
+      <p class="intro__meta">Medium: SVG &middot; 1200 &times; 900 &middot; generated locally &middot; 16 plates</p>
+    </div>
+  </section>
+
+  <!-- ============ FILTER BAR ============ -->
+  <div class="filterbar" role="search" aria-label="Filter plates">
+    <div class="shell filterbar__inner">
+
+      <div class="chipset" id="category-chips" role="group" aria-label="Filter by category">
+        <button type="button" class="chip is-active" data-category="all" aria-pressed="true">All <span class="chip__count">16</span></button>
+      </div>
+
+      <div class="filterbar__tools">
+        <div class="search">
+          <label class="field__label" for="plate-search">Search</label>
+          <div class="search__box">
+            <input class="field__input" type="search" id="plate-search" placeholder="Title, description or tag" autocomplete="off">
+            <button type="button" class="search__clear" id="search-clear" aria-label="Clear search" hidden>&times;</button>
+          </div>
+        </div>
+
+        <div class="filterbar__selects">
+          <div>
+            <label class="field__label" for="plate-sort">Sort</label>
+            <select class="field__input" id="plate-sort">
+              <option value="featured" selected>Featured</option>
+              <option value="az">Title A&ndash;Z</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+
+          <div class="viewtoggle" role="group" aria-label="Layout density">
+            <span class="field__label" id="view-label">View</span>
+            <div class="viewtoggle__row" aria-labelledby="view-label">
+              <button type="button" class="chip is-active" data-view="grid" aria-pressed="true">Grid</button>
+              <button type="button" class="chip" data-view="comfort" aria-pressed="false">Comfort</button>
+              <button type="button" class="chip" data-view="mosaic" aria-pressed="false">Mosaic</button>
+            </div>
+          </div>
+
+          <button type="button" class="chip chip--help" id="help-open" aria-haspopup="dialog">
+            <span aria-hidden="true">?</span> Keys
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ GRID ============ -->
+  <section class="shell gallery" aria-labelledby="gallery-heading">
+    <h2 class="sr-only" id="gallery-heading">Plate index</h2>
+    <p class="gallery__summary" id="gallery-summary" aria-live="polite">Showing 16 of 16 plates.</p>
+
+    <div class="skeletons" id="skeletons" aria-hidden="true"></div>
+
+    <ul class="grid" id="grid" role="list" data-view="grid"></ul>
+
+    <div class="empty" id="empty" hidden>
+      <p class="empty__msg">No plates match that combination.</p>
+      <button type="button" class="btn btn--ghost" id="empty-reset">Reset filters</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <span class="site-footer__mark">PLATES</span>
+    <ul class="swatches" role="list" aria-label="Palette used across the series">
+      <li><span></span>0A0B0C</li>
+      <li><span></span>171A1D</li>
+      <li><span></span>24282D</li>
+      <li><span></span>F2EFE8</li>
+      <li><span></span>C9F24B</li>
+      <li><span></span>4FD6C2</li>
+      <li><span></span>FF6B4A</li>
+      <li><span></span>FFC857</li>
+    </ul>
+    <button type="button" class="btn btn--ghost btn--sm" id="to-top">Back to top &uarr;</button>
+  </div>
+</footer>
+
+<!-- ============ REUSABLE DIALOG (lightbox + shortcuts) ============ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__scrim" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="modal-panel">
+    <div class="modal__bar">
+      <p class="modal__index" id="modal-index">00 / 00</p>
+      <button type="button" class="icon-btn" data-close aria-label="Close dialog">&times;</button>
+    </div>
+    <div class="modal__body" id="modal-body"></div>
+    <div class="modal__nav" id="modal-nav">
+      <button type="button" class="icon-btn" id="modal-prev" aria-label="Previous plate">&larr;</button>
+      <div class="filmstrip" id="filmstrip" role="group" aria-label="Jump to a plate"></div>
+      <button type="button" class="icon-btn" id="modal-next" aria-label="Next plate">&rarr;</button>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Geometric portrait mark</title>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0v64" fill="none" stroke="#24282D" stroke-width="1"/>
+    </pattern>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0v14" fill="none" stroke="#F2EFE8" stroke-width="1"/>
+    </pattern>
+    <clipPath id="head">
+      <circle cx="400" cy="330" r="190"/>
+    </clipPath>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="800" fill="#0A0B0C"/>
+  <rect width="800" height="800" fill="url(#grid)" opacity=".55"/>
+
+  <!-- crosshair -->
+  <g stroke="#F2EFE8" stroke-width="1" opacity=".14">
+    <path d="M0 330h800"/>
+    <path d="M400 0v800"/>
+  </g>
+
+  <!-- registration brackets -->
+  <g fill="none" stroke="#8FB52F" stroke-width="2" opacity=".9">
+    <path d="M40 96V40h56"/>
+    <path d="M704 40h56v56"/>
+    <path d="M760 704v56h-56"/>
+    <path d="M96 760H40v-56"/>
+  </g>
+
+  <!-- shoulders -->
+  <path d="M150 800v-96c0-104 112-162 250-162s250 58 250 162v96z" fill="#171A1D" stroke="#24282D" stroke-width="2"/>
+  <path d="M150 800c0-130 90-220 250-232v232z" fill="#FF6B4A" opacity=".55"/>
+  <path d="M650 800c0-130-90-220-250-232v232z" fill="#4FD6C2" opacity=".5"/>
+  <path d="M150 800v-96c0-104 112-162 250-162s250 58 250 162v96" fill="none" stroke="#F2EFE8" stroke-width="2" opacity=".35"/>
+
+  <!-- head: three quarter discs + one open quadrant -->
+  <g>
+    <path d="M400 330V140a190 190 0 0 0-190 190z" fill="#C9F24B"/>
+    <path d="M400 330H210a190 190 0 0 0 190 190z" fill="#FF6B4A"/>
+    <path d="M400 330v190a190 190 0 0 0 190-190z" fill="#4FD6C2"/>
+  </g>
+  <g clip-path="url(#head)">
+    <rect x="210" y="140" width="380" height="380" fill="url(#hatch)" opacity=".05"/>
+  </g>
+  <circle cx="400" cy="330" r="190" fill="none" stroke="#F2EFE8" stroke-width="2" opacity=".5"/>
+  <circle cx="400" cy="330" r="112" fill="none" stroke="#F2EFE8" stroke-width="1.5" stroke-dasharray="7 9" opacity=".4"/>
+  <rect x="392" y="322" width="16" height="16" fill="#0A0B0C"/>
+
+  <!-- scan bar -->
+  <rect x="0" y="486" width="800" height="2" fill="#C9F24B" opacity=".3"/>
+
+  <!-- signature block -->
+  <g fill="none" stroke="#9AA1A9" stroke-width="1" opacity=".7">
+    <path d="M620 668h140M620 686h96"/>
+  </g>
+  <rect x="600" y="652" width="12" height="12" fill="#C9F24B"/>
+
+  <rect width="800" height="800" filter="url(#grain)" opacity=".05"/>
+</svg>

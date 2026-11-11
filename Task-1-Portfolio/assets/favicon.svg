@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>NG monogram</title>
+  <rect width="64" height="64" fill="#0A0B0C"/>
+  <g fill="none" stroke="#C9F24B" stroke-width="7" stroke-linejoin="miter" stroke-linecap="butt">
+    <path d="M9 50V14l21 36V14"/>
+    <path d="M56 23a13 13 0 1 0 0 18v-8h-9"/>
+  </g>
+  <rect x="52" y="6" width="7" height="7" fill="#8FB52F" transform="rotate(45 55.5 9.5)"/>
+</svg>

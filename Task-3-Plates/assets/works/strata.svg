@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="pl04t" aria-describedby="pl04d">
+  <title id="pl04t">Strata</title>
+  <desc id="pl04d">Abstract plate: eleven horizontal sedimentary bands of varying tone and thickness stacked across a near-black ground, their seams roughened by a turbulence displacement, one band marked in clay orange, with three fossil ellipse outlines and a depth scale down the left edge.</desc>
+  <defs>
+  <filter id="grain" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="4" seed="31" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.949 0 0 0 0 0.937 0 0 0 0 0.910 0.9 0 0 0 -0.34"/>
+  </filter>
+  <radialGradient id="vig" cx="600" cy="440" r="820" gradientUnits="userSpaceOnUse">
+    <stop offset="0.45" stop-color="#0A0B0C" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0A0B0C" stop-opacity="0.62"/>
+  </radialGradient>
+  <filter id="erode" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.05" numOctaves="3" seed="23" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="15" xChannelSelector="R" yChannelSelector="G"/>
+  </filter></defs>
+  <rect width="1200" height="900" fill="#0A0B0C"/>
+<g filter="url(#erode)">
+  <path d="M0 96L67 100L133 102L200 103L267 102L333 100L400 99L467 99L533 99L600 100L667 100L733 99L800 96L867 92L933 89L1000 87L1067 88L1133 90L1200 92L1200 138L0 138Z" fill="#F2EFE8" opacity="0.05"/>
+  <path d="M0 147L67 143L133 141L200 140L267 141L333 141L400 140L467 136L533 131L600 126L667 123L733 124L800 127L867 132L933 137L1000 141L1067 141L1133 141L1200
+140L1200 206L0 206Z" fill="#F2EFE8" opacity="0.08"/>
+  <path d="M0 206L67 205L133 202L200 196L267 190L333 186L400 186L467 191L533 199L600 207L667 213L733 215L800 215L867 213L933 212L1000 214L1067 218L1133 221L1200
+222L1200 300L0 300Z" fill="#F2EFE8" opacity="0.13"/>
+  <path d="M0 277L67 277L133 283L200 293L267 304L333 313L400 318L467 317L533 313L600 310L667 309L733 311L800 315L867 316L933 314L1000 306L1067 295L1133 284L1200
+277L1200 355L0 355Z" fill="#F2EFE8" opacity="0.06"/>
+  <path d="M0 361L67 362L133 362L200 361L267 359L333 358L400 357L467 358L533 359L600 358L667 356L733 353L800 349L867 347L933 346L1000 348L1067 350L1133 353L1200
+355L1200 436L0 436Z" fill="#F2EFE8" opacity="0.19"/>
+  <path d="M0 439L67 437L133 438L200 438L267 438L333 436L400 432L467 426L533 422L600 421L667 423L733 428L800 434L867 438L933 440L1000 440L1067 439L1133 439L1200
+440L1200 478L0 478Z" fill="#F2EFE8" opacity="0.04"/>
+  <path d="M0 475L67 471L133 465L200 460L267 458L333 461L400 467L467 476L533 484L600 488L667 489L733 487L800 485L867 485L933 487L1000 491L1067 493L1133 493L1200
+488L1200 546L0 546Z" fill="#FF6B4A" opacity="0.5"/>
+  <path d="M0 526L67 534L133 546L200 556L267 564L333 565L400 563L467 558L533 555L600 555L667 558L733 560L800 560L867 555L933 546L1000 535L1067 525L1133 521L1200
+522L1200 640L0 640Z" fill="#F2EFE8" opacity="0.09"/>
+  <path d="M0 648L67 647L133 645L200 643L267 642L333 642L400 643L467 643L533 642L600 639L667 636L733 633L800 631L867 632L933 634L1000 637L1067 639L1133 641L1200
+641L1200 695L0 695Z" fill="#F2EFE8" opacity="0.31"/>
+  <path d="M0 695L67 696L133 696L200 695L267 692L333 688L400 683L467 680L533 681L600 684L667 690L733 696L800 699L867 700L933 700L1000 699L1067 699L1133 701L1200
+704L1200 776L0 776Z" fill="#F2EFE8" opacity="0.06"/>
+  <path d="M0 766L67 761L133 757L200 757L267 762L333 770L400 779L467 785L533 788L600 787L667 785L733 783L800 783L867 786L933 789L1000 790L1067 788L1133 781L1200
+772L1200 818L0 818Z" fill="#F2EFE8" opacity="0.14"/>
+</g>
+<g stroke="#F2EFE8" stroke-width="1" opacity="0.2"><path d="M0 138H1200"/><path d="M0 206H1200"/><path d="M0 300H1200"/><path d="M0 355H1200"/><path d="M0 436H1200"/><path d="M0 478H1200"/><path d="M0 546H1200"/><path d="M0 640H1200"/><path d="M0 695H1200"/><path d="M0 776H1200"/><path d="M0 818H1200"/></g>
+<g>
+  <ellipse cx="300" cy="300" rx="46" ry="16" transform="rotate(-14 300 300)" fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.4"/>
+  <ellipse cx="700" cy="520" rx="62" ry="20" transform="rotate(8 700 520)" fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.4"/>
+  <ellipse cx="900" cy="240" rx="38" ry="14" transform="rotate(-6 900 240)" fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.4"/>
+</g>
+<g>
+  <text x="72" y="148" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15" letter-spacing="2" font-weight="400" fill="#F2EFE8" opacity="0.45">0M</text>
+  <text x="72" y="270" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15" letter-spacing="2" font-weight="400" fill="#F2EFE8" opacity="0.45">50M</text>
+  <text x="72" y="392" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15" letter-spacing="2" font-weight="400" fill="#F2EFE8" opacity="0.45">100M</text>
+  <text x="72" y="514" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15" letter-spacing="2" font-weight="400" fill="#F2EFE8" opacity="0.45">150M</text>
+  <text x="72" y="636" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15" letter-spacing="2" font-weight="400" fill="#F2EFE8" opacity="0.45">200M</text>
+  <text x="72" y="758" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15" letter-spacing="2" font-weight="400" fill="#F2EFE8" opacity="0.45">250M</text>
+</g>
+<path d="M62 96v760" stroke="#F2EFE8" stroke-width="1" opacity="0.35"/>
+<g fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.55">
+  <path d="M28 62V28h34 M1138 28h34v34 M1172 838v34h-34 M62 872H28v-34"/>
+</g>
+<rect x="28" y="28" width="1144" height="844" fill="none" stroke="#F2EFE8" stroke-width="1" opacity="0.14"/>
+<text x="760" y="872" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="19" letter-spacing="3.4" font-weight="400" fill="#F2EFE8" opacity="0.42">SECTION A-A / BEDS 11</text>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.55"/>
+</svg>

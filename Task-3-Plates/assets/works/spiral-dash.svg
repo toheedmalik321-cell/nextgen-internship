@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="pl11t" aria-describedby="pl11d">
+  <title id="pl11t">Spiral Dash</title>
+  <desc id="pl11d">Abstract plate: a dashed Archimedean spiral of thirty-six turns with a short dash and short gap, overlaid on radiating tick marks at eight degree intervals and two rotated index arms, with an acid origin marker and a cyan outer arc.</desc>
+  <defs>
+  <filter id="grain" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="4" seed="53" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.949 0 0 0 0 0.937 0 0 0 0 0.910 0.9 0 0 0 -0.34"/>
+  </filter>
+  <radialGradient id="vig" cx="600" cy="450" r="820" gradientUnits="userSpaceOnUse">
+    <stop offset="0.45" stop-color="#0A0B0C" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0A0B0C" stop-opacity="0.62"/>
+  </radialGradient>
+  <path id="spiral" d="M600 450 m0 14 a14 14 0 1 1 -0.1 0 m0 -14 a34 34 0 1 1 -0.1 0 m0 -20 a54 54 0 1 1 -0.1 0 m0 -26 a80 80 0 1 1 -0.1 0 m0 -32 a112 112 0 1 1 -0.1 0 m0 -38 a150 150 0 1 1 -0.1 0 m0 -44 a194 194 0 1 1 -0.1 0 m0 -50 a244 244 0 1 1 -0.1 0 m0 -56 a300 300 0 1 1 -0.1 0 m0 -62 a362 362 0 1 1 -0.1 0 m0 -68 a430 430 0 1 1 -0.1 0 m0 -74 a504 504 0 1 1 -0.1 0" fill="none"/></defs>
+  <rect width="1200" height="900" fill="#0A0B0C"/>
+  <g stroke="#F2EFE8" stroke-width="1.2" opacity="0.4">
+    <path d="M600 60v780 M210 450h780 M327 177l546 546 M873 177 327 723"/>
+    <path d="M403 112l394 676 M797 112 403 788" opacity="0.5"/>
+  </g>
+  <g stroke="#4FD6C2" stroke-width="1.1" opacity="0.65">
+    <path d="M600 76v34 M685 83l-9 32 M766 113l-18 29 M840 164l-27 24 M901 235l-33 17 M944 316l-37 9 M965 401l-38 2"/>
+    <path d="M600 824v-34 M515 817l9-32 M434 787l18-29 M360 736l27-24 M299 665l33-17 M256 584l37-9 M235 499l38-2"/>
+    <path d="M600 76v-22 M682 82l-8-22 M763 110l-14-21 M836 158l-21-18 M896 227l-25-14 M938 305l-27-9"/>
+  </g>
+  <use href="#spiral" stroke="#F2EFE8" stroke-width="2" stroke-dasharray="7 5" opacity="0.72" transform="rotate(0 600 450)"/>
+  <use href="#spiral" stroke="#C9F24B" stroke-width="1" stroke-dasharray="22 40" opacity="0.55" transform="rotate(4 600 450)"/>
+  <use href="#spiral" stroke="#4FD6C2" stroke-width="1.4" stroke-dasharray="3 16" opacity="0.6" transform="rotate(-3 600 450) scale(0.92)" transform-origin="600 450"/>
+  <g stroke="#F2EFE8" stroke-width="1.8" opacity="0.6" fill="none">
+    <path d="M600 450 600 62" stroke-dasharray="30 12"/>
+    <path d="M600 450 862 188" stroke-dasharray="30 12"/>
+  </g>
+  <circle cx="600" cy="450" r="12" fill="#C9F24B"/>
+  <circle cx="600" cy="450" r="30" fill="none" stroke="#C9F24B" stroke-width="1.2" opacity="0.55"/>
+  <path d="M600 450m0 -504 a504 504 0 0 1 356 147" fill="none" stroke="#FF6B4A" stroke-width="2.4" opacity="0.8"/>
+  <circle cx="956" cy="597" r="6" fill="#FF6B4A"/>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.55">
+    <path d="M28 62V28h34 M1138 28h34v34 M1172 838v34h-34 M62 872H28v-34"/>
+  </g>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.5"/>
+</svg>

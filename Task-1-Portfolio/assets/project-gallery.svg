@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <title>Image Gallery cover</title>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0v64" fill="none" stroke="#24282D" stroke-width="1"/>
+    </pattern>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#101214"/>
+  <rect width="800" height="500" fill="url(#grid)" opacity=".45"/>
+
+  <!-- aperture mark -->
+  <circle cx="120" cy="120" r="42" fill="none" stroke="#4FD6C2" stroke-width="2"/>
+  <circle cx="120" cy="120" r="16" fill="#4FD6C2" opacity=".35"/>
+  <g stroke="#4FD6C2" stroke-width="2">
+    <path d="M120 60v14M120 166v14M60 120h14M166 120h14"/>
+  </g>
+
+  <!-- back frame -->
+  <rect x="150" y="80" width="330" height="250" fill="none" stroke="#4FD6C2" stroke-width="2" opacity=".55"/>
+
+  <!-- middle frame -->
+  <rect x="270" y="140" width="330" height="250" fill="#0A0B0C" stroke="#4FD6C2" stroke-width="2"/>
+  <path d="M300 350l72-92 54 62 44-46 62 76z" fill="#4FD6C2" opacity=".22"/>
+
+  <!-- front frame with the active image -->
+  <rect x="390" y="200" width="340" height="230" fill="#171A1D" stroke="#F2EFE8" stroke-width="2" opacity=".98"/>
+  <rect x="390" y="200" width="340" height="230" fill="none" stroke="#4FD6C2" stroke-width="2"/>
+  <circle cx="470" cy="272" r="26" fill="#4FD6C2"/>
+  <path d="M390 430l96-116 66 74 56-58 122 100z" fill="#4FD6C2" opacity=".55"/>
+  <path d="M390 430l96-116 66 74 56-58 122 100z" fill="none" stroke="#4FD6C2" stroke-width="2"/>
+
+  <!-- crop marks -->
+  <g fill="none" stroke="#4FD6C2" stroke-width="2">
+    <path d="M370 200h-24v24"/>
+    <path d="M730 200h24v24"/>
+    <path d="M730 430h24v-24"/>
+    <path d="M370 430h-24v-24"/>
+  </g>
+
+  <!-- thumbnail strip -->
+  <g fill="#101214" stroke="#24282D" stroke-width="2">
+    <rect x="150" y="380" width="86" height="60"/>
+    <rect x="252" y="380" width="86" height="60"/>
+    <rect x="354" y="380" width="86" height="60"/>
+  </g>
+  <rect x="150" y="380" width="86" height="60" fill="none" stroke="#4FD6C2" stroke-width="2"/>
+  <path d="M162 430l26-32 20 22 14-16 8 8v28z" fill="#4FD6C2" opacity=".4"/>
+
+  <rect width="800" height="500" filter="url(#grain)" opacity=".05"/>
+</svg>

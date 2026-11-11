@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taskbook — Task Manager | NG Software Hub Week 01–02</title>
+<meta name="description" content="Taskbook: a vanilla JavaScript task manager with add, update, delete, filtering, search, sorting, drag-and-drop reordering and offline persistence.">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="app-header">
+  <div class="app-header__inner">
+    <div class="brand">
+      <span class="brand__mark">NG&#9701;SH</span>
+      <span class="brand__meta">WEEK 01&ndash;02 &middot; TASKBOOK</span>
+    </div>
+    <div class="app-header__tools">
+      <p class="readout" id="header-readout" aria-live="polite">0 OPEN</p>
+      <button type="button" class="btn btn--ghost btn--sm" id="theme-toggle" aria-pressed="false">
+        <span class="btn__icon" aria-hidden="true">&#9789;</span>
+        <span id="theme-toggle-label">LIGHT</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <h1 class="sr-only">Taskbook — a local-first task manager</h1>
+
+  <!-- ============ COMPOSE ============ -->
+  <section class="panel compose" aria-labelledby="compose-heading">
+    <h2 class="eyebrow" id="compose-heading"><span>01</span> / New Task</h2>
+
+    <form class="compose__form" id="task-form" novalidate>
+      <div class="field field--grow">
+        <label class="field__label" for="task-title">Task title</label>
+        <input class="field__input" type="text" id="task-title" name="title"
+               placeholder="e.g. Build the image gallery lightbox" autocomplete="off"
+               aria-describedby="task-title-error" maxlength="120">
+        <p class="field__error" id="task-title-error" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-priority">Priority</label>
+        <select class="field__input" id="task-priority" name="priority">
+          <option value="low">Low</option>
+          <option value="normal" selected>Normal</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-due">Due date</label>
+        <input class="field__input" type="date" id="task-due" name="due" aria-describedby="task-due-error">
+        <p class="field__error" id="task-due-error" role="alert"></p>
+      </div>
+
+      <div class="field field--full">
+        <label class="field__label" for="task-notes">Notes <span class="field__optional">(optional)</span></label>
+        <textarea class="field__input field__input--area" id="task-notes" name="notes" rows="2"
+                  placeholder="Anything worth remembering about this task" maxlength="400"></textarea>
+      </div>
+
+      <div class="compose__actions">
+        <button type="submit" class="btn btn--primary">Add Task</button>
+        <p class="compose__counter" id="title-counter" aria-live="polite">0/80</p>
+      </div>
+    </form>
+  </section>
+
+  <!-- ============ BOARD LAYOUT ============ -->
+  <div class="workspace">
+
+    <div class="workspace__main">
+
+      <div class="toolbar" aria-label="Filter and sort tasks">
+        <div class="field field--search">
+          <label class="field__label" for="task-search">Search</label>
+          <div class="search">
+            <input class="field__input" type="search" id="task-search" placeholder="Filter by title or notes" autocomplete="off">
+            <button type="button" class="search__clear" id="search-clear" aria-label="Clear search" hidden>&times;</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="task-sort">Sort</label>
+          <select class="field__input" id="task-sort">
+            <option value="manual" selected>Manual order</option>
+            <option value="due">Due date</option>
+            <option value="priority">Priority</option>
+            <option value="alpha">Title A&ndash;Z</option>
+          </select>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Task views">
+          <button type="button" class="tab" role="tab" id="tab-all"      data-filter="all"       aria-selected="true">All <span class="tab__count" data-count="all">0</span></button>
+          <button type="button" class="tab" role="tab" id="tab-active"   data-filter="active"    aria-selected="false">Active <span class="tab__count" data-count="active">0</span></button>
+          <button type="button" class="tab" role="tab" id="tab-completed" data-filter="completed" aria-selected="false">Completed <span class="tab__count" data-count="completed">0</span></button>
+          <button type="button" class="tab" role="tab" id="tab-trash"     data-filter="trash"     aria-selected="false">Trash <span class="tab__count" data-count="trash">0</span></button>
+        </div>
+      </div>
+
+      <p class="list-summary" id="list-summary" aria-live="polite">No tasks yet.</p>
+
+      <ul class="task-list" id="task-list" role="list"></ul>
+
+      <div class="empty" id="empty-state" hidden>
+        <p class="empty__msg" id="empty-msg">Nothing here.</p>
+        <button type="button" class="btn btn--ghost" id="empty-reset">Reset filters</button>
+      </div>
+    </div>
+
+    <!-- ============ STICKY RAIL ============ -->
+    <aside class="rail" aria-label="Task statistics and actions">
+
+      <section class="panel panel--inset" aria-labelledby="stats-heading">
+        <h2 class="eyebrow" id="stats-heading"><span>02</span> / Progress</h2>
+        <p class="stat-big" id="stat-percent">0<span class="stat-big__unit">%</span></p>
+        <div class="progress" role="img" aria-label="Completion progress" id="progress-wrap">
+          <div class="progress__fill" id="progress-fill"></div>
+        </div>
+        <dl class="stat-grid">
+          <div class="stat"><dt>Total</dt><dd data-stat="total">0</dd></div>
+          <div class="stat"><dt>Active</dt><dd data-stat="active">0</dd></div>
+          <div class="stat"><dt>Done</dt><dd data-stat="completed">0</dd></div>
+          <div class="stat stat--warn"><dt>Overdue</dt><dd data-stat="overdue">0</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel panel--inset" aria-labelledby="bulk-heading">
+        <h2 class="eyebrow" id="bulk-heading"><span>03</span> / Bulk</h2>
+        <div class="btn-stack">
+          <button type="button" class="btn btn--ghost btn--sm" data-bulk="complete-all">Complete all active</button>
+          <button type="button" class="btn btn--ghost btn--sm" data-bulk="clear-completed">Clear completed</button>
+          <button type="button" class="btn btn--ghost btn--sm" data-bulk="empty-trash">Empty trash</button>
+          <button type="button" class="btn btn--ghost btn--sm" data-bulk="export">Export JSON</button>
+          <button type="button" class="btn btn--ghost btn--sm" data-bulk="import">Import JSON</button>
+        </div>
+        <input type="file" id="import-file" accept="application/json,.json" hidden>
+        <p class="storage-line" id="storage-line">STORE 0 B</p>
+      </section>
+
+      <section class="panel panel--inset" aria-labelledby="keys-heading">
+        <h2 class="eyebrow" id="keys-heading"><span>04</span> / Shortcuts</h2>
+        <ul class="keys" role="list">
+          <li><kbd>/</kbd><span>Focus search</span></li>
+          <li><kbd>n</kbd><span>New task</span></li>
+          <li><kbd>Esc</kbd><span>Cancel / clear</span></li>
+          <li><kbd>Del</kbd><span>Delete focused row</span></li>
+        </ul>
+      </section>
+
+    </aside>
+  </div>
+</main>
+
+<footer class="app-footer">
+  <div class="app-footer__inner">
+    <span class="app-footer__mark">TASKBOOK</span>
+    <span class="app-footer__meta">Built with vanilla HTML, CSS &amp; JavaScript &middot; Next Gen Software Hub Pvt. Ltd.</span>
+    <button type="button" class="btn btn--ghost btn--sm" id="to-top">Back to top &uarr;</button>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

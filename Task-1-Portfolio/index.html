@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toheed Mehmood — Web Development Intern · NG⟡SH</title>
+  <meta name="description" content="Portfolio of Toheed Mehmood, web development intern at Next Gen Software Hub, based in Lahore, Pakistan. Semantic HTML, mobile-first CSS layout systems and vanilla JavaScript.">
+  <meta name="theme-color" content="#0A0B0C">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER / PRIMARY NAVIGATION ============ -->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="wordmark" href="#top" aria-label="NG Software Hub, back to top">NG<span class="wordmark__mark" aria-hidden="true">⟡</span>SH</a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__box" aria-hidden="true">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </span>
+        <span class="nav-toggle__text" data-label-open="Menu" data-label-close="Close">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#work">Work</a></li>
+          <li><a class="site-nav__link" href="#about">About</a></li>
+          <li><a class="site-nav__link" href="#skills">Skills</a></li>
+          <li><a class="site-nav__link" href="#projects">Projects</a></li>
+          <li><a class="site-nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <p class="site-nav__meta">Lahore, Pakistan · <span class="clock" id="nav-clock" aria-hidden="true">--:--:--</span></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 00 / HERO ============ -->
+    <section class="section hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__top">
+          <p class="eyebrow"><span>00</span> / Welcome</p>
+          <p class="hero__clock">
+            <span class="hero__clock-label">Lahore · PKT</span>
+            <time class="clock" id="clock" datetime="1970-01-01T00:00:00+05:00">--:--:-- PKT</time>
+          </p>
+        </div>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line"><span class="hero__word" data-word>Building</span></span>
+          <span class="hero__line"><span class="hero__word" data-word>Accessible</span></span>
+          <span class="hero__line"><span class="hero__word is-outlined" data-word>Interfaces</span></span>
+        </h1>
+        <p class="hero__hint">Move the cursor across the headline — the outline follows.</p>
+
+        <div class="hero__body">
+          <p class="hero__lead">Web development intern — Next Gen Software Hub, working remotely from Lahore, Pakistan. Building accessible, responsive interfaces with HTML, CSS and JavaScript.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#work">View my work</a>
+            <a class="btn btn--ghost" href="assets/cvv.html" target="_blank" rel="noopener">View CV</a>
+          </div>
+        </div>
+
+        <ul class="stat-strip">
+          <li class="stat">
+            <span class="stat__value">08</span>
+            <span class="stat__label">Weeks completed</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">04</span>
+            <span class="stat__label">Projects shipped</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">100%</span>
+            <span class="stat__label">Responsive layouts</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 01 / ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <p class="eyebrow"><span>01</span> / About</p>
+        <h2 class="section__title" id="about-title">Layout is a language</h2>
+
+        <!-- Flexbox: 7 / 5 asymmetric split -->
+        <div class="about__split">
+          <div class="about__text" data-reveal>
+            <p>I am a web development intern at Next Gen Software Hub, working remotely from Lahore, at the end of an eight-week programme. My work is deliberately unglamorous: semantic markup, layout systems that hold up at every width, and JavaScript that makes a page better without taking it over.</p>
+            <p>I build mobile-first. The 360&nbsp;px layout is the design, not a fallback — the wide layout is a consequence of it. Flexbox handles one-dimensional flow, CSS Grid handles two, and I try not to reach for either when a third option would be simpler.</p>
+            <p>What I care about most is that the page still works for someone on a slow connection, a mid-range Android phone, or a keyboard instead of a mouse. Everything here is hand-written: no framework, no build step, no placeholder copy.</p>
+
+            <dl class="spec-list">
+              <div class="spec-list__row">
+                <dt class="spec-list__key">Focus</dt>
+                <dd class="spec-list__value">Accessible, responsive websites</dd>
+              </div>
+              <div class="spec-list__row">
+                <dt class="spec-list__key">Stack</dt>
+                <dd class="spec-list__value">HTML5 · CSS Grid &amp; Flexbox · Vanilla ES2023</dd>
+              </div>
+              <div class="spec-list__row">
+                <dt class="spec-list__key">Currently</dt>
+                <dd class="spec-list__value">Wrapping up the capstone and submission</dd>
+              </div>
+              <div class="spec-list__row">
+                <dt class="spec-list__key">Location</dt>
+                <dd class="spec-list__value">Lahore, Pakistan</dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="about__figure" data-reveal>
+            <div class="about__frame">
+              <img class="about__avatar" src="assets/avatar.svg" width="800" height="800" alt="Abstract geometric portrait mark: layered lime, clay and cyan facets arranged as a head and shoulders on an ink grid.">
+            </div>
+            <figcaption class="caption-plate">Fig. 01 — Geometric portrait mark</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 / SKILLS ============ -->
+    <section class="section skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <p class="eyebrow"><span>02</span> / Skills</p>
+        <h2 class="section__title" id="skills-title">Self-assessed, honestly</h2>
+
+        <!-- CSS Grid: four skill panels -->
+        <div class="skills__grid">
+          <article class="panel">
+            <h3 class="panel__title">Markup &amp; Styling</h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">HTML5 &amp; semantics</span><span class="skill__value">90%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="90"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">CSS Grid</span><span class="skill__value">88%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="88"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Flexbox</span><span class="skill__value">86%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="86"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Responsive layout</span><span class="skill__value">84%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="84"></span></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3 class="panel__title">Programming</h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">JavaScript (ES2023)</span><span class="skill__value">82%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="82"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">DOM manipulation</span><span class="skill__value">80%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="80"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Async &amp; fetch</span><span class="skill__value">72%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="72"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Web APIs</span><span class="skill__value">74%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="74"></span></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3 class="panel__title">Tooling</h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">VS Code</span><span class="skill__value">92%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="92"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Git &amp; GitHub</span><span class="skill__value">85%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="85"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Chrome DevTools</span><span class="skill__value">83%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="83"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Command line</span><span class="skill__value">70%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="70"></span></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3 class="panel__title">Practices</h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Debugging</span><span class="skill__value">81%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="81"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Clean code</span><span class="skill__value">79%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="79"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Documentation</span><span class="skill__value">76%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="76"></span></div>
+              </li>
+              <li class="skill">
+                <p class="skill__head"><span class="skill__name">Agile &amp; stand-ups</span><span class="skill__value">68%</span></p>
+                <div class="skill__track" aria-hidden="true"><span class="skill__bar" data-level="68"></span></div>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="skills__footnote">Learning sources: MDN Web Docs · javascript.info · W3Schools · Chrome DevTools. Percentages are my own self-assessment, not a certification.</p>
+      </div>
+    </section>
+
+    <!-- ============ 03 / PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="eyebrow"><span>03</span> / Projects</p>
+        <h2 class="section__title" id="projects-title">Four builds, four patterns</h2>
+        <p class="section__lead">Each project in this submission exercises a different problem: persistence, media, timed state and drag-and-drop.</p>
+
+        <!-- CSS Grid: two-column project grid, collapses to one column -->
+        <ul class="project-grid">
+          <li class="project-card" data-reveal>
+            <article class="project-card__inner">
+              <div class="project-card__cover">
+                <img class="project-card__img" src="assets/project-todo.svg" width="800" height="500" loading="lazy" alt="Cover art for Taskbook: four stacked task rows, the first checked with a lime tick and the second in progress.">
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Taskbook</h3>
+                <p class="project-card__desc">Add, edit, complete and delete tasks with filters, bulk actions and a versioned localStorage store that survives a reload.</p>
+                <ul class="chips">
+                  <li class="chip">Vanilla JS</li>
+                  <li class="chip">localStorage</li>
+                  <li class="chip">CRUD</li>
+                </ul>
+                <a class="link-ghost" href="../Task-2-Taskbook/index.html">View project <span class="link-ghost__arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="project-card" data-reveal>
+            <article class="project-card__inner">
+              <div class="project-card__cover">
+                <img class="project-card__img" src="assets/project-gallery.svg" width="800" height="500" loading="lazy" alt="Cover art for Plates: three overlapping frames with corner crop marks in cyan.">
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Plates</h3>
+                <p class="project-card__desc">Sixteen hand-made SVG studies with category filters, debounced search, three densities and a keyboard-trapped lightbox.</p>
+                <ul class="chips">
+                  <li class="chip">CSS Grid</li>
+                  <li class="chip">Lightbox</li>
+                  <li class="chip">a11y</li>
+                </ul>
+                <a class="link-ghost" href="../Task-3-Plates/index.html">View project <span class="link-ghost__arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="project-card" data-reveal>
+            <article class="project-card__inner">
+              <div class="project-card__cover">
+                <img class="project-card__img" src="assets/project-quiz.svg" width="800" height="500" loading="lazy" alt="Cover art for Quiz Arena: segmented answer bars and a gold progress arc.">
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Quiz Arena</h3>
+                <p class="project-card__desc">A timed assessment over a 20-question bank, with four difficulty tiers, per-question explanations, a topic breakdown and a browser-local leaderboard.</p>
+                <ul class="chips">
+                  <li class="chip">Timers</li>
+                  <li class="chip">State machine</li>
+                  <li class="chip">Scoring</li>
+                </ul>
+                <a class="link-ghost" href="../Task-4-Quiz/index.html">View project <span class="link-ghost__arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="project-card" data-reveal>
+            <article class="project-card__inner">
+              <div class="project-card__cover">
+                <img class="project-card__img" src="assets/project-kanban.svg" width="800" height="500" loading="lazy" alt="Cover art for TaskFlow: four columns of clay cards with one card lifted above a dashed drop line.">
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">TaskFlow</h3>
+                <p class="project-card__desc">A four-column board with pointer and keyboard drag-and-drop, undo/redo history and a state object that survives a page reload.</p>
+                <ul class="chips">
+                  <li class="chip">Drag &amp; drop</li>
+                  <li class="chip">Persistence</li>
+                  <li class="chip">Grid</li>
+                </ul>
+                <a class="link-ghost" href="../Task-5-TaskFlow/index.html">View project <span class="link-ghost__arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 04 / TIMELINE ============ -->
+    <section class="section timeline" id="work" aria-labelledby="timeline-title">
+      <div class="container">
+        <p class="eyebrow"><span>04</span> / Timeline</p>
+        <h2 class="section__title" id="timeline-title">Eight weeks, five projects</h2>
+        <p class="section__lead">One marker per week of the internship. Each marker lights up as it enters the viewport.</p>
+
+        <!-- CSS Grid: timeline rail + marker column -->
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__week">Week 01</p>
+            <h3 class="timeline__title">HTML, CSS and Git foundations</h3>
+            <p class="timeline__body">Document structure, Flexbox and Grid, then Git and GitHub: repositories, commits and branching. The baseline every later build sits on.</p>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__week">Week 02</p>
+            <h3 class="timeline__title">Portfolio and Taskbook</h3>
+            <p class="timeline__body">This responsive portfolio, plus the to-do list: add, edit, complete and delete, with filters and a versioned localStorage store.</p>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__week">Week 03</p>
+            <h3 class="timeline__title">Animation and advanced JavaScript</h3>
+            <p class="timeline__body">Keyframe animation and transitions on hover, then event delegation, closures and promises applied to a filterable gallery.</p>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__week">Week 04</p>
+            <h3 class="timeline__title">Plates gallery</h3>
+            <p class="timeline__body">Sixteen locally authored SVG studies with category filters, debounced search, three densities and a keyboard-trapped lightbox.</p>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__week">Week 05</p>
+            <h3 class="timeline__title">Quiz Arena — build</h3>
+            <p class="timeline__body">A timed quiz with a question bank, four difficulty tiers and per-question explanations, built around form validation and error handling.</p>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__week">Week 06</p>
+            <h3 class="timeline__title">Quiz Arena — scoring and results</h3>
+            <p class="timeline__body">Countdown timer, pause and resume, streak scoring, a review screen, a browser-local leaderboard and a JSON or print report.</p>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__week">Week 07</p>
+            <h3 class="timeline__title">TaskFlow capstone</h3>
+            <p class="timeline__body">Four-column board with pointer and keyboard drag-and-drop, undo/redo history, insights and offline persistence — documented for code review.</p>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__week">Week 08</p>
+            <h3 class="timeline__title">Final presentation and review</h3>
+            <p class="timeline__body">A QA pass across all five builds, the presentation deck, the demo script and the submission package.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 05 / CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="eyebrow"><span>05</span> / Contact</p>
+        <h2 class="section__title" id="contact-title">Say hello, or send a note</h2>
+
+        <div class="contact__split">
+          <div class="contact__details" data-reveal>
+            <h3 class="contact__sub">Next Gen Software Hub Pvt. Ltd.</h3>
+            <address class="contact__address">
+              Mussalhapur<br>
+              Patna 800006<br>
+              Bihar, India
+            </address>
+            <ul class="contact__list">
+              <li class="contact__row">
+                <span class="contact__key">Phone</span>
+                <a class="contact__value" href="tel:+919508220237">+91 95082 20237</a>
+              </li>
+              <li class="contact__row">
+                <span class="contact__key">Email</span>
+                <a class="contact__value" href="mailto:admin@nextgensoftwarehub.in">admin@nextgensoftwarehub.in</a>
+              </li>
+              <li class="contact__row">
+                <span class="contact__key">Web</span>
+                <a class="contact__value" href="https://nextgensoftwarehub.in">nextgensoftwarehub.in</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact__form-wrap" data-reveal>
+            <h3 class="contact__sub">Send a note</h3>
+            <p class="contact__hint">Validated in the browser. There is no server behind this form — see the README.</p>
+            <form class="form" id="contact-form" novalidate>
+              <div class="field">
+                <label class="field__label" for="cf-name">Name</label>
+                <input class="field__input" id="cf-name" name="name" type="text" autocomplete="name" required minlength="2" aria-describedby="cf-name-error" placeholder="Toheed Mehmood">
+                <p class="field__error" id="cf-name-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="cf-email">Email</label>
+                <input class="field__input" id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-error" placeholder="you@example.com">
+                <p class="field__error" id="cf-email-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="cf-message">Message</label>
+                <textarea class="field__input field__input--area" id="cf-message" name="message" rows="5" required minlength="20" aria-describedby="cf-message-error" placeholder="Twenty characters or more, please."></textarea>
+                <p class="field__error" id="cf-message-error" role="alert"></p>
+              </div>
+
+              <div class="form__foot">
+                <button class="btn btn--primary" id="cf-submit" type="submit">Send message</button>
+                <p class="form__status" id="cf-status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="wordmark">NG<span class="wordmark__mark" aria-hidden="true">⟡</span>SH</p>
+        <p class="site-footer__tag">Built with HTML, CSS &amp; vanilla JS</p>
+      </div>
+      <p class="site-footer__meta">&copy; <span id="year">2026</span> Next Gen Software Hub Pvt. Ltd. · Built in Lahore, Pakistan</p>
+      <button class="btn btn--ghost btn--sm" type="button" data-scroll-top>Back to top <span aria-hidden="true">&uarr;</span></button>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

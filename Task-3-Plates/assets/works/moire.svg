@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="pl06t" aria-describedby="pl06d">
+  <title id="pl06t">Moire</title>
+  <desc id="pl06d">Abstract plate: two fine line gratings of 9.5 unit pitch, one vertical and one horizontal, counter-rotated six and a half degrees in opposite directions, overlapping to produce wide optical beat bands, with a third coarser grating and a cyan registration circle.</desc>
+  <defs>
+  <filter id="grain" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="4" seed="31" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.949 0 0 0 0 0.937 0 0 0 0 0.910 0.9 0 0 0 -0.34"/>
+  </filter>
+  <radialGradient id="vig" cx="600" cy="440" r="820" gradientUnits="userSpaceOnUse">
+    <stop offset="0.45" stop-color="#0A0B0C" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0A0B0C" stop-opacity="0.62"/>
+  </radialGradient><pattern id="grA" width="9.5" height="9.5" patternUnits="userSpaceOnUse">
+    <path d="M0 0v9.5" stroke="#F2EFE8" stroke-width="1.15" opacity="0.36"/>
+  </pattern>
+  <pattern id="grB" width="9.5" height="9.5" patternUnits="userSpaceOnUse">
+    <path d="M0 0h9.5" stroke="#F2EFE8" stroke-width="1.15" opacity="0.36"/>
+  </pattern>
+  <pattern id="grC" width="19" height="19" patternUnits="userSpaceOnUse">
+    <path d="M0 0v19" stroke="#F2EFE8" stroke-width="1" opacity="0.12"/>
+  </pattern></defs>
+  <rect width="1200" height="900" fill="#0A0B0C"/>
+<rect x="-300" y="-300" width="1800" height="1500" fill="url(#grC)"/>
+<g transform="rotate(-6.5 600 450)"><rect x="-300" y="-300" width="1800" height="1500" fill="url(#grA)"/></g>
+<g transform="rotate(6.5 600 450)"><rect x="-300" y="-300" width="1800" height="1500" fill="url(#grB)"/></g>
+<circle cx="600" cy="450" r="304" fill="none" stroke="#4FD6C2" stroke-width="1.6" opacity="0.75"/>
+<circle cx="600" cy="450" r="46" fill="none" stroke="#4FD6C2" stroke-width="1.2" opacity="0.45"/>
+<path d="M600 132v70 M600 698v70 M282 450h70 M848 450h70" stroke="#4FD6C2" stroke-width="1.2" opacity="0.55"/>
+<g fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.55">
+  <path d="M28 62V28h34 M1138 28h34v34 M1172 838v34h-34 M62 872H28v-34"/>
+</g>
+<rect x="28" y="28" width="1144" height="844" fill="none" stroke="#F2EFE8" stroke-width="1" opacity="0.14"/>
+<text x="76" y="872" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="19" letter-spacing="3.4" font-weight="400" fill="#F2EFE8" opacity="0.42">PITCH 9.50 / ROT 6.5</text>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.55"/>
+</svg>

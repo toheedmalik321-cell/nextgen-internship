@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="pl12t" aria-describedby="pl12d">
+  <title id="pl12t">Waveform</title>
+  <desc id="pl12d">Abstract plate: eleven stacked sine ribbons of increasing amplitude and decreasing phase, each drawn as an outlined band with hairline upper and lower edges, forming a single continuous sound-like contour from left to right.</desc>
+  <defs>
+  <filter id="grain" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="4" seed="71" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.949 0 0 0 0 0.937 0 0 0 0 0.910 0.9 0 0 0 -0.34"/>
+  </filter>
+  <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#F2EFE8" stop-opacity="0.05"/>
+    <stop offset="0.5" stop-color="#F2EFE8" stop-opacity="0.9"/>
+    <stop offset="1" stop-color="#F2EFE8" stop-opacity="0.05"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="#0A0B0C"/>
+  <g stroke="#24282D" stroke-width="1" opacity="0.9">
+    <path d="M0 450h1200"/>
+    <path d="M0 150h1200 M0 300h1200 M0 600h1200 M0 750h1200"/>
+  </g>
+  <g fill="none" stroke="url(#fade)" stroke-width="1.5">
+    <path d="M-20 92 C120 92 160 24 300 24 C440 24 480 92 620 92 C760 92 800 24 940 24 C1040 24 1080 66 1220 66"/>
+    <path d="M-20 148 C120 148 160 66 300 66 C440 66 480 148 620 148 C760 148 800 66 940 66 C1040 66 1080 114 1220 114"/>
+    <path d="M-20 208 C130 208 170 96 300 96 C430 96 470 208 620 208 C770 208 810 96 940 96 C1050 96 1090 150 1220 150"/>
+    <path d="M-20 272 C140 272 180 130 300 130 C420 130 460 272 620 272 C780 272 820 130 940 130 C1060 130 1100 192 1220 192"/>
+    <path d="M-20 340 C150 340 190 166 300 166 C410 166 450 340 620 340 C790 340 830 166 940 166 C1070 166 1110 236 1220 236"/>
+    <path d="M-20 412 C160 412 200 206 300 206 C400 206 440 412 620 412 C800 412 840 206 940 206 C1075 206 1115 284 1220 284"/>
+    <path d="M-20 450 C160 450 200 250 300 250 C400 250 440 450 620 450 C800 450 840 250 940 250 C1075 250 1115 320 1220 320"/>
+  </g>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1.8" opacity="0.9">
+    <path d="M-20 512 C170 512 210 296 300 296 C390 296 430 512 620 512 C810 512 850 296 940 296 C1080 296 1120 372 1220 372"/>
+  </g>
+  <path d="M-20 512 C170 512 210 296 300 296 C390 296 430 512 620 512 C810 512 850 296 940 296 C1080 296 1120 372 1220 372 L1220 566 C1120 566 1080 626 940 626 C850 626 810 686 620 686 C430 686 390 566 300 566 C210 566 170 566 -20 566 Z" fill="#C9F24B" opacity="0.13"/>
+  <g fill="none" stroke="#4FD6C2" stroke-width="1.5" opacity="0.85">
+    <path d="M-20 596 C180 596 220 352 300 352 C380 352 420 596 620 596 C820 596 860 352 940 352 C1090 352 1130 432 1220 432"/>
+    <path d="M-20 676 C190 676 230 408 300 408 C370 408 410 676 620 676 C830 676 870 408 940 408 C1100 408 1140 492 1220 492"/>
+    <path d="M-20 752 C200 752 240 462 300 462 C360 462 400 752 620 752 C840 752 880 462 940 462 C1110 462 1150 552 1220 552"/>
+  </g>
+  <g fill="#4FD6C2" opacity="0.9">
+    <circle cx="300" cy="596" r="5"/>
+    <circle cx="620" cy="596" r="5"/>
+    <circle cx="940" cy="596" r="5"/>
+  </g>
+  <g fill="none" stroke="#FF6B4A" stroke-width="1.3" opacity="0.75">
+    <path d="M-20 806 C210 806 250 516 300 516 C350 516 390 806 620 806 C850 806 890 516 940 516 C1120 516 1160 614 1220 614" stroke-dasharray="14 9"/>
+  </g>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1.1" opacity="0.4">
+    <path d="M120 40v820 M300 40v820 M480 40v820 M660 40v820 M840 40v820 M1020 40v820"/>
+  </g>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.55">
+    <path d="M28 62V28h34 M1138 28h34v34 M1172 838v34h-34 M62 872H28v-34"/>
+  </g>
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.5"/>
+</svg>

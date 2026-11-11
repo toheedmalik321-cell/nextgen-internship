@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="pl16t" aria-describedby="pl16d">
+  <title id="pl16t">Dot Matrix Face</title>
+  <desc id="pl16d">Abstract plate: a portrait rendered as a matrix of circular dots on a fifteen by eleven grid. Dot radius is driven by a key light from the upper left, with darkened eye sockets, a bright brow bar, a highlighted nose ridge, a shadowed mouth, an acid core on the lit cheek, and a cyan rim light picking out the right contour of the skull.</desc>
+  <defs>
+  <filter id="grain" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="4" seed="97" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.949 0 0 0 0 0.937 0 0 0 0 0.910 0.9 0 0 0 -0.34"/>
+  </filter>
+  <radialGradient id="vig" cx="600" cy="450" r="820" gradientUnits="userSpaceOnUse">
+    <stop offset="0.45" stop-color="#0A0B0C" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0A0B0C" stop-opacity="0.62"/>
+  </radialGradient></defs>
+  <rect width="1200" height="900" fill="#0A0B0C"/>
+  <g fill="#F2EFE8" opacity="0.78">
+    <circle cx="403" cy="176" r="3.7"/><circle cx="469" cy="176" r="4.9"/><circle cx="534" cy="176" r="5.3"/><circle cx="600" cy="176" r="5.3"/><circle cx="666" cy="176" r="4.7"/><circle cx="731" cy="176" r="3.8"/><circle cx="797" cy="176" r="4"/>
+    <circle cx="337" cy="232" r="3.2"/><circle cx="403" cy="232" r="5.3"/><circle cx="469" cy="232" r="6.2"/><circle cx="534" cy="232" r="6.6"/><circle cx="600" cy="232" r="6.4"/><circle cx="666" cy="232" r="5.8"/><circle cx="731" cy="232" r="4.9"/><circle cx="797" cy="232" r="3.6"/><circle cx="863" cy="232" r="3.1"/>
+    <circle cx="337" cy="288" r="4.7"/><circle cx="403" cy="288" r="6.4"/><circle cx="469" cy="288" r="7.3"/><circle cx="534" cy="288" r="7.6"/><circle cx="600" cy="288" r="7.4"/><circle cx="666" cy="288" r="6.7"/><circle cx="731" cy="288" r="5.7"/><circle cx="797" cy="288" r="4.4"/><circle cx="863" cy="288" r="4.6"/>
+    <circle cx="271" cy="344" r="2.4"/><circle cx="337" cy="344" r="5.6"/><circle cx="403" cy="344" r="7.1"/><circle cx="469" cy="344" r="4.2"/><circle cx="534" cy="344" r="6"/><circle cx="600" cy="344" r="8.3"/><circle cx="666" cy="344" r="5.4"/><circle cx="731" cy="344" r="3.2"/><circle cx="797" cy="344" r="4.9"/><circle cx="863" cy="344" r="3.4"/><circle cx="929" cy="344" r="2"/>
+    <circle cx="271" cy="400" r="3.3"/><circle cx="337" cy="400" r="6.1"/><circle cx="403" cy="400" r="2.3"/><circle cx="469" cy="400" r="0.7"/><circle cx="534" cy="400" r="0.7"/><circle cx="600" cy="400" r="7.5"/><circle cx="666" cy="400" r="0.6"/><circle cx="797" cy="400" r="1.4"/>
+    <circle cx="271" cy="456" r="3.5"/><circle cx="337" cy="456" r="6.2"/><circle cx="403" cy="456" r="7.2"/><circle cx="469" cy="456" r="2.6"/><circle cx="534" cy="456" r="4.7"/><circle cx="666" cy="456" r="4.3"/><circle cx="731" cy="456" r="1.9"/><circle cx="797" cy="456" r="4.7"/>
+    <circle cx="271" cy="512" r="3.2"/><circle cx="337" cy="512" r="6"/><circle cx="403" cy="512" r="8.6"/><circle cx="600" cy="512" r="8.9"/><circle cx="666" cy="512" r="7.9"/><circle cx="731" cy="512" r="6.6"/><circle cx="797" cy="512" r="5.2"/>
+    <circle cx="271" cy="568" r="2.1"/><circle cx="337" cy="568" r="5.4"/><circle cx="403" cy="568" r="8.1"/><circle cx="534" cy="568" r="8.9"/><circle cx="600" cy="568" r="1.7"/><circle cx="666" cy="568" r="7.3"/><circle cx="731" cy="568" r="6.2"/><circle cx="797" cy="568" r="4.8"/>
+    <circle cx="337" cy="624" r="4.5"/><circle cx="403" cy="624" r="6.2"/><circle cx="469" cy="624" r="6.1"/><circle cx="534" cy="624" r="1.6"/><circle cx="600" cy="624" r="1"/><circle cx="666" cy="624" r="0.8"/><circle cx="731" cy="624" r="2.7"/><circle cx="797" cy="624" r="2.6"/>
+    <circle cx="337" cy="680" r="2.7"/><circle cx="403" cy="680" r="5"/><circle cx="469" cy="680" r="6"/><circle cx="534" cy="680" r="6.3"/><circle cx="600" cy="680" r="6.2"/><circle cx="666" cy="680" r="3.4"/><circle cx="731" cy="680" r="2.8"/><circle cx="797" cy="680" r="2.1"/>
+    <circle cx="403" cy="736" r="3.2"/><circle cx="469" cy="736" r="4.5"/><circle cx="534" cy="736" r="5"/><circle cx="600" cy="736" r="5"/><circle cx="666" cy="736" r="2.7"/>
+  </g>
+  <g fill="#C9F24B" opacity="0.95">
+    <circle cx="600" cy="456" r="13"/><circle cx="469" cy="512" r="10.2"/><circle cx="534" cy="512" r="9.7"/><circle cx="469" cy="568" r="9.5"/>
+  </g>
+  <g fill="#4FD6C2" opacity="0.68">
+    <circle cx="863" cy="400" r="3.7"/><circle cx="929" cy="400" r="2.8"/><circle cx="863" cy="456" r="3.8"/><circle cx="929" cy="456" r="3"/><circle cx="863" cy="512" r="3.6"/><circle cx="929" cy="512" r="2.7"/><circle cx="863" cy="568" r="3.3"/><circle cx="929" cy="568" r="1.8"/><circle cx="863" cy="624" r="2.6"/><circle cx="863" cy="680" r="1.6"/><circle cx="731" cy="736" r="2.1"/><circle cx="797" cy="736" r="2.1"/>
+  </g>
+  <g fill="none" stroke="#24282D" stroke-width="1" opacity="0.55">
+    <path d="M140 176h920 M140 232h920 M140 288h920 M140 344h920 M140 400h920 M140 456h920 M140 512h920 M140 568h920 M140 624h920 M140 680h920 M140 736h920"/>
+  </g>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.55">
+    <path d="M28 62V28h34 M1138 28h34v34 M1172 838v34h-34 M62 872H28v-34"/>
+  </g>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.5"/>
+</svg>

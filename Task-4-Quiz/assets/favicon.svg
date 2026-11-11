@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Quiz Arena">
+  <title>Quiz Arena</title>
+  <rect width="64" height="64" fill="#0A0B0C"/>
+  <rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="#24282D" stroke-width="3"/>
+  <circle cx="29" cy="33" r="14.5" fill="none" stroke="#C9F24B" stroke-width="6"/>
+  <path d="M39 43 L49 53" fill="none" stroke="#C9F24B" stroke-width="6"/>
+  <g fill="none" stroke="#C9F24B" stroke-width="3.2" stroke-linecap="square">
+    <path d="M24.4 28.6 C24.4 24.2 32.6 24.2 32.6 28.6 C32.6 31.6 28.5 31.9 28.5 35.2"/>
+  </g>
+  <rect x="26.9" y="38" width="3.2" height="3.2" fill="#C9F24B"/>
+</svg>

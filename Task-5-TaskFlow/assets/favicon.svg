@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="TaskFlow">
+  <title>TaskFlow</title>
+  <rect width="64" height="64" fill="#0A0B0C"/>
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#24282D" stroke-width="4"/>
+  <g fill="#C9F24B">
+    <path d="M12 16h16v6h-10v5h9v6h-9v5h10v6H12z"/>
+    <path d="M32 16h6v16h12v6H32z"/>
+  </g>
+  <rect x="12" y="46" width="40" height="2" fill="#C9F24B"/>
+</svg>

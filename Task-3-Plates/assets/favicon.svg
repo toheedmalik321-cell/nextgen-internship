@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Plates">
+  <title>Plates</title>
+  <rect width="64" height="64" fill="#0a0b0c"/>
+  <g fill="none" stroke="#24282d">
+    <path d="M4.5 4.5h55v55h-55z"/>
+    <path d="M22.5 4.5v55M41.5 4.5v55M4.5 22.5h55M4.5 41.5h55"/>
+  </g>
+  <rect x="24" y="24" width="16" height="16" fill="#c9f24b"/>
+  <rect x="7" y="7" width="14" height="14" fill="none" stroke="#4fd6c2" stroke-width="1.6"/>
+</svg>

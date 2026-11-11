@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="pl08t" aria-describedby="pl08d">
+  <title id="pl08t">Orbit</title>
+  <desc id="pl08d">Abstract plate: five concentric orbital rings drawn as open arcs of differing sweep, each carrying small satellite markers, one filled acid ellipse tilted across the largest orbit, with a cyan apogee crosshair and a corner bracket frame.</desc>
+  <defs>
+  <filter id="grain" x="0" y="0" width="1200" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="4" seed="8" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.949 0 0 0 0 0.937 0 0 0 0 0.910 0.9 0 0 0 -0.34"/>
+  </filter>
+  <radialGradient id="vig" cx="600" cy="450" r="820" gradientUnits="userSpaceOnUse">
+    <stop offset="0.45" stop-color="#0A0B0C" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0A0B0C" stop-opacity="0.62"/>
+  </radialGradient>
+  <radialGradient id="core" cx="600" cy="450" r="150" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#C9F24B" stop-opacity="0.30"/>
+    <stop offset="1" stop-color="#C9F24B" stop-opacity="0"/>
+  </radialGradient></defs>
+  <rect width="1200" height="900" fill="#0A0B0C"/>
+  <circle cx="600" cy="450" r="330" fill="url(#core)"/>
+  <g fill="none" stroke="#24282D" stroke-width="1.2">
+    <circle cx="600" cy="450" r="110"/>
+    <circle cx="600" cy="450" r="190"/>
+    <circle cx="600" cy="450" r="270"/>
+    <circle cx="600" cy="450" r="350"/>
+    <circle cx="600" cy="450" r="410"/>
+  </g>
+  <g fill="none" stroke="#F2EFE8" stroke-linecap="butt">
+    <path d="M600 340a110 110 0 0 1 104 71" stroke-width="2.2" opacity="0.85"/>
+    <path d="M790 450a190 190 0 0 1-138 185" stroke-width="1.8" opacity="0.62"/>
+    <path d="M330 450a270 270 0 0 1 66-176" stroke-width="2" opacity="0.7"/>
+    <path d="M600 80a370 370 0 0 1 262 109" stroke-width="1.5" opacity="0.5"/>
+    <path d="M975 585a395 395 0 0 1-212 244" stroke-width="1.6" opacity="0.45"/>
+  </g>
+  <ellipse cx="600" cy="450" rx="410" ry="152" fill="none" stroke="#C9F24B" stroke-width="2.4" opacity="0.9" transform="rotate(-18 600 450)"/>
+  <ellipse cx="600" cy="450" rx="352" ry="128" fill="none" stroke="#C9F24B" stroke-width="1.1" opacity="0.4" transform="rotate(-18 600 450)"/>
+  <circle cx="878" cy="361" r="9" fill="#C9F24B"/>
+  <circle cx="878" cy="361" r="20" fill="none" stroke="#C9F24B" stroke-width="1.2" opacity="0.5"/>
+  <g fill="#F2EFE8">
+    <circle cx="600" cy="340" r="4.5" opacity="0.9"/>
+    <circle cx="710" cy="450" r="3.5" opacity="0.7"/>
+    <circle cx="396" cy="450" r="3.5" opacity="0.7"/>
+    <circle cx="600" cy="260" r="4" opacity="0.6"/>
+    <circle cx="600" cy="640" r="4" opacity="0.6"/>
+    <circle cx="754" cy="302" r="3" opacity="0.55"/>
+    <circle cx="862" cy="597" r="3" opacity="0.55"/>
+    <circle cx="338" cy="303" r="3" opacity="0.55"/>
+    <circle cx="446" cy="635" r="3" opacity="0.5"/>
+  </g>
+  <circle cx="600" cy="450" r="34" fill="none" stroke="#4FD6C2" stroke-width="1.6" opacity="0.8"/>
+  <circle cx="600" cy="450" r="9" fill="#4FD6C2"/>
+  <g stroke="#4FD6C2" stroke-width="1.2" opacity="0.6" fill="none">
+    <path d="M600 404v-32 M600 496v32 M554 450h-32 M646 450h32"/>
+  </g>
+  <g fill="none" stroke="#F2EFE8" stroke-width="1.6" opacity="0.55">
+    <path d="M28 62V28h34 M1138 28h34v34 M1172 838v34h-34 M62 872H28v-34"/>
+  </g>
+  <rect width="1200" height="900" fill="url(#vig)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.5"/>
+</svg>
