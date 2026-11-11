@@ -50,7 +50,7 @@ What went into it:
 • reduced-motion support
 • a print-friendly HTML CV
 
-No framework, no build step — the page opens straight from `file://`.
+No framework, no build step — the page opens straight from file://.
 
 The biggest lesson: a portfolio is a layout and accessibility exercise before it is a
 design exercise.
@@ -88,7 +88,7 @@ I built the artwork as SVG so the whole gallery stays lightweight. The interface
 category filters, debounced search, three densities, a keyboard-trapped lightbox and FLIP
 animations for reordering.
 
-The tricky part was `file://`. `fetch()` is blocked when a page is opened directly from
+The tricky part was file://. fetch() is blocked when a page is opened directly from
 disk, so the catalogue is treated as an enhancement: use it when available, otherwise
 fall back to an inline dataset. Same behaviour either way.
 
@@ -106,7 +106,7 @@ Task 4: Quiz Arena — a timed quiz built with HTML, CSS and vanilla JavaScript.
 resume, streak scoring, per-question explanations and a local leaderboard.
 
 The real work was validation and state: six screens driven by one phase value, inline
-`role="alert"` errors, a pool-size warning when filters match fewer questions than
+role="alert" errors, a pool-size warning when filters match fewer questions than
 requested, and a fault screen instead of a blank page when something fails.
 
 A quiz is mostly an error-handling exercise wearing a game costume.
@@ -124,7 +124,7 @@ Task 5: TaskFlow — my capstone project.
 A four-column Kanban board with pointer and keyboard drag-and-drop, undo/redo, filters,
 search, insights, settings and offline persistence.
 
-Architecture: a pure reducer, plain action objects through `dispatch`, subscribers for
+Architecture: a pure reducer, plain action objects through dispatch, subscribers for
 rendering, and one flush to localStorage per commit. Undo/redo is a history stack beside
 the reducer rather than a tangle inside the UI.
 
@@ -149,7 +149,7 @@ Five projects, one design system, all built with HTML, CSS and vanilla JavaScrip
 4. Quiz Arena
 5. TaskFlow
 
-No framework, no build step, no bundler. Every project opens from `file://` and works.
+No framework, no build step, no bundler. Every project opens from file:// and works.
 
 I also wrote the full internship report, a presentation script and a requirements
 checklist that maps every brief item to evidence.
